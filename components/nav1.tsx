@@ -33,10 +33,10 @@ const Navbar = () => {
       }`}
     >
       <div className="flex items-center justify-between w-full max-w-[1400px] mx-auto">
-        {/* Logo with Golden Ratio scaling on hover */}
+       
         <Link href="/" className="relative z-10 group">
           <img
-            src="/LOGO/dwp-logo.png"
+            src="/LOGO/DWP-logo.png"
             alt="DWP logo"
             className="h-10 w-auto transition-all duration-500 group-hover:scale-105"
           />
