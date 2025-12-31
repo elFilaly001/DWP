@@ -16,30 +16,27 @@ const ServiceCard = ({
   index: number;
   className?: string;
   hasPlaceholder?: boolean;
-  imageHeight?: string; // CSS height (e.g. '200px' or '60%')
+  imageHeight?: string;
   imageWidth?: string;
-  imageUrl?: string; // CSS width (e.g. '100%' or '300px')
+  imageUrl?: string;
 }) => {
   const [active, setActive] = useState<number | null>(null);
+  
   return (
     <div
-      className={`${className} relative group cursor-pointer overflow-hidden rounded-sm aspect-square transition-all duration-700 ease-out hover:shadow-2xl hover:z-10 flex flex-col`}
+      className={`${className} relative group cursor-pointer overflow-hidden rounded-sm aspect-square transition-all duration-700 ease-out hover:shadow-2xl hover:z-10`}
       onMouseEnter={() => setActive(index)}
       onMouseLeave={() => setActive(null)}
     >
-      {/* base dark overlay (behind placeholder/content) */}
+      {/* base dark overlay */}
       <div className="absolute inset-0 bg-black transition-transform duration-1000 group-hover:scale-110 z-0" />
 
-      {/* decorative placeholder rendered in-flow at the top when requested */}
-      {/* Render an image when `imageUrl` is provided; otherwise show the decorative placeholder when requested. */}
+      {/* Image - Fixed at top with absolute positioning */}
       {imageUrl ? (
         <div
-          className={`relative z-10 overflow-hidden ${
-            imageHeight || imageWidth ? "" : "w-full h-[60%]"
-          }`}
+          className="absolute top-0 left-0 right-0 z-10 overflow-hidden"
           style={{
-            height: imageHeight ?? undefined,
-            width: imageWidth ?? undefined,
+            height: imageHeight || '60%',
           }}
         >
           <img
@@ -50,20 +47,23 @@ const ServiceCard = ({
         </div>
       ) : hasPlaceholder ? (
         <div
-          className={`flex items-center justify-center border border-white/10 text-white/60 text-sm font-medium pointer-events-none relative z-10 ${
-            imageHeight || imageWidth ? "" : "w-full h-[60%]"
-          }`}
+          className="absolute top-0 left-0 right-0 flex items-center justify-center border border-white/10 text-white/60 text-sm font-medium pointer-events-none z-10"
           style={{
-            height: imageHeight ?? undefined,
-            width: imageWidth ?? undefined,
+            height: imageHeight || '60%',
           }}
         >
           Image
         </div>
       ) : null}
 
-      <div className="relative p-6 md:p-8 flex flex-col justify-between transform transition-transform duration-500 group-hover:scale-105 z-20 flex-1">
-        <div>
+      {/* Content - Fixed at bottom with absolute positioning */}
+      <div 
+        className="absolute bottom-0 left-0 right-0 p-6 md:p-8 overflow-y-auto z-20"
+        style={{
+          height: imageHeight || imageUrl || hasPlaceholder ? '40%' : '100%',
+        }}
+      >
+        <div className="transform transition-transform duration-500 group-hover:scale-105">
           <h3
             className={`text-white font-light mb-4 transition-all duration-500 group-hover:tracking-wide ${
               index % 5 === 2 ? "text-3xl md:text-4xl" : "text-2xl md:text-3xl"
@@ -72,9 +72,7 @@ const ServiceCard = ({
             {service.title}
           </h3>
 
-          <p
-            className={`text-white/70 leading-relaxed mb-6 transition-all duration-700`}
-          >
+          <p className="text-white/70 leading-relaxed transition-all duration-700 whitespace-pre-line">
             {service.description}
           </p>
         </div>
@@ -103,12 +101,11 @@ const ServicesPage = () => {
   const services = [
     {
       title: "Rénovation de cuisine",
-      description:
-       `
+      description: `
         Transformez votre cuisine en un paradis culinaire avec des appareils modernes, des rangements sur mesure et des finitions élégantes.
         Notre expertise en rénovation culinaire combine fonctionnalité professionnelle et design sophistiqué pour créer des espaces qui inspirent la créativité et facilitent le travail quotidien. Que vous souhaitiez moderniser une cuisine existante ou la réinventer complètement, nous intégrons des solutions innovantes adaptées à vos besoins spécifiques. Des systèmes d'éclairage LED stratégiquement positionnés aux surfaces de travail durables et hygiéniques, chaque détail est méticuleusement planifié pour optimiser l'efficacité et l'esthétique.
         `,
-       featured: true,
+      featured: true,
       size: "large",
     },
     {
@@ -416,7 +413,10 @@ const ServicesPage = () => {
             <div className="relative aspect-square bg-gray-800 rounded-full overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <img src="/Gemini_Generated_Image_3vwnsw3vwnsw3vwn.png" alt="design team member" />
+                <img
+                  src="/Gemini_Generated_Image_3vwnsw3vwnsw3vwn.png"
+                  alt="design team member"
+                />
               </div>
             </div>
 
