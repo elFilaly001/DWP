@@ -27,7 +27,7 @@ const ServiceCard = ({
 
   return (
     <div
-      className={`${className} relative group cursor-pointer overflow-hidden rounded-sm transition-all duration-700 ease-out hover:shadow-2xl hover:z-10 h-full flex flex-col`}
+      className={`${className} relative group cursor-pointer overflow-hidden transition-all duration-700 ease-out hover:shadow-2xl hover:z-10 h-full flex flex-col`}
       onMouseEnter={() => setActive(index)}
       onMouseLeave={() => setActive(null)}
     >
@@ -102,6 +102,7 @@ const ServicesPage = () => {
       title: "Rénovation de cuisine",
       description: `
         Transformez votre cuisine en un paradis culinaire avec des appareils modernes, des rangements sur mesure et des finitions élégantes.
+        Notre expertise en rénovation culinaire combine fonctionnalité professionnelle et design sophistiqué pour créer des espaces qui inspirent la créativité et facilitent le travail quotidien. Que vous souhaitiez moderniser une cuisine existante ou la réinventer complètement, nous intégrons des solutions innovantes adaptées à vos besoins spécifiques. Des systèmes d'éclairage LED stratégiquement positionnés aux surfaces de travail durables et hygiéniques, chaque détail est méticuleusement planifié pour optimiser l'efficacité et l'esthétique.
         `,
       featured: true,
       size: "large",
@@ -323,10 +324,10 @@ const ServicesPage = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-3 bg-white  w-[600px] aspect-square">
-              <div className=" relative bg-black h-[600px]">
-                <div className="absolute bg-[#cbe425] -right-2 top-2 w-[550px] h-50 "></div>
-                <div>
+            <div className="flex flex-col gap-3 bg-white w-[600px] aspect-square">
+              <div className="relative bg-black flex-[2]">
+                <div className="absolute bg-[#cbe425] -right-2 top-2 w-[550px] h-12 pointer-events-none"></div>
+                <div className="h-full">
                   <ServiceCard
                     service={services[1]}
                     index={1}
@@ -335,15 +336,12 @@ const ServicesPage = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-row gap-3 bg-white">
-                <div className="bg-black w-[300px] aspect-square">
+              <div className="flex flex-row gap-3 bg-white flex-[1] items-stretch">
+                <div className="flex-1 relative overflow-hidden">
                   <ServiceCard service={services[2]} index={2} />
                 </div>
-                <div className="relative bg-black  w-[300px] aspect-square">
-                  <div className="absolute bg-[#cbe425] -right-2 -bottom-4 w-[200px] h-50 "></div>
-                  <div>
-                    <ServiceCard service={services[3]} index={3} />
-                  </div>
+                <div className="flex-1 relative overflow-hidden">
+                  <ServiceCard service={services[3]} index={3} />
                 </div>
               </div>
             </div>
@@ -389,7 +387,7 @@ const ServicesPage = () => {
                       {Array.from({ length: step.fibonacci }).map((_, i) => (
                         <div
                           key={i}
-                          className="w-3 h-3 bg-black rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500"
+                          className="w-3 h-3 bg-black opacity-0 group-hover:opacity-100 transition-all duration-500"
                           style={{ transitionDelay: `${i * 100}ms` }}
                         />
                       ))}
@@ -417,7 +415,7 @@ const ServicesPage = () => {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-[1fr_1.618fr] gap-12 items-center">
             {/* Left: 38.2% - Image/Avatar placeholder */}
-            <div className="relative aspect-square bg-gray-800 rounded-full overflow-hidden">
+            <div className="relative aspect-square bg-gray-800  overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <img
@@ -486,7 +484,7 @@ const ServicesPage = () => {
             {[8, 13, 21, 13, 8].map((size, i) => (
               <div
                 key={i}
-                className="bg-gray-300 rounded-full transition-all duration-500 hover:bg-black cursor-pointer"
+                className="bg-gray-300 transition-all duration-500 hover:bg-black cursor-pointer"
                 style={{
                   width: `${size}px`,
                   height: `${size}px`,

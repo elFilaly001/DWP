@@ -103,6 +103,7 @@ const ServicesPage = () => {
       title: "Rénovation de cuisine",
       description: `
         Transformez votre cuisine en un paradis culinaire avec des appareils modernes, des rangements sur mesure et des finitions élégantes.
+        Notre expertise en rénovation culinaire combine fonctionnalité professionnelle et design sophistiqué pour créer des espaces qui inspirent la créativité et facilitent le travail quotidien. Que vous souhaitiez moderniser une cuisine existante ou la réinventer complètement, nous intégrons des solutions innovantes adaptées à vos besoins spécifiques. Des systèmes d'éclairage LED stratégiquement positionnés aux surfaces de travail durables et hygiéniques, chaque détail est méticuleusement planifié pour optimiser l'efficacité et l'esthétique.
         `,
       featured: true,
       size: "large",
