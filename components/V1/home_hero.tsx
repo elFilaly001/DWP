@@ -1,5 +1,4 @@
 "use client";
-import Navbar from "./navbar";
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { redirect } from 'next/navigation';
