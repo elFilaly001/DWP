@@ -64,7 +64,7 @@ const ServiceCard = ({
   );
 };
 
-const ServicesPage = () => {
+const PortfolioPage = () => {
   const [activeService, setActiveService] = useState<number | null>(null);
   const [activeStep, setActiveStep] = useState<number | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -87,7 +87,7 @@ const ServicesPage = () => {
       description:
         "Transformez votre cuisine en un paradis culinaire avec des appareils modernes, des rangements sur mesure et des finitions élégantes.",
       featured: true,
-      size: "large",
+      size: "large", // Golden rectangle: 2x height
     },
     {
       title: "Conception de bureau",
@@ -185,47 +185,20 @@ const ServicesPage = () => {
     <div className="bg-white">
       {/* Hero Section - Golden Ratio Split */}
       <section className="relative min-h-screen flex items-center bg-black overflow-hidden">
-        {/* Background with subtle spiral */}
-        <div
-          className="absolute inset-0 opacity-20 w-full h-full flex items-center justify-center "
-          dangerouslySetInnerHTML={{
-            __html: `
-<svg xmlns="http://www.w3.org/2000/svg" version="1.0" height="580" width="915" id="svg2">
-    <metadata id="metadata7"></metadata>
-    <defs id="defs5"/>
-    <path transform="matrix(0,1,1,0,0,0)" id="path2782" style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:1.99999988;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <text transform="scale(1.0001758,0.99982423)" xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.32342434px;line-height:1.25;font-family:'Times New Roman';letter-spacing:0px;word-spacing:0px;fill:#6b7280;fill-opacity:1;stroke:none;stroke-width:1" x="196.37582" y="-166.3719" id="text990"><tspan id="tspan988" x="196.37582" y="-166.3719" style="stroke-width:1">constructed startin with 1x1mm square; last square is 144x144</tspan></text>
-    <path d="M 18.898132,563.14957 A 543.94263,543.75146 0 0 1 562.84077,19.398132" id="path1873" style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path1875" d="M -899.02731,355.46605 A 336.18655,336.06839 0 0 1 -562.84075,19.397675" transform="scale(-1,1)"/>
-    <path transform="matrix(0,-1,-1,0,0,0)" d="m -563.14906,-691.27235 a 207.68251,207.75557 0 0 1 207.68251,-207.75556" id="path2762" style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path2764" d="M 562.84128,-434.76319 A 128.43051,128.38536 0 0 1 691.27179,-563.14854" transform="scale(1,-1)"/>
-    <path d="m 562.84184,434.7637 a 79.324539,79.296654 0 0 1 79.32454,-79.29665" id="path2766" style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path2768" d="m -691.27137,404.55478 a 49.105476,49.088211 0 0 1 49.10548,-49.08821" transform="scale(-1,1)"/>
-    <path transform="scale(-1)" d="m -691.27178,-404.55426 a 30.218561,30.207939 0 0 1 30.21856,-30.20794" id="path2770" style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path2772" d="m 642.16632,-415.8829 a 18.886414,18.879776 0 0 1 18.88641,-18.87978" transform="scale(1,-1)"/>
-    <path d="m 642.16683,415.88342 a 11.331649,11.327665 0 0 1 11.33164,-11.32766" id="path2774" style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path id="rect2784" d="M 653.49848,415.88344 V 404.55528" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path id="rect2786" d="M 661.05275,415.88294 H 642.16583" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path id="rect2788" d="m 653.49798,412.10688 h 7.55477" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path id="rect2790" d="m 657.27586,412.10738 v 3.77606" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path id="rect2794" d="m 661.05325,404.55428 v 30.20844" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path id="rect2796" d="m 642.16586,404.55478 h 49.10598" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path id="rect2798" d="M 642.16636,434.76372 V 355.46656" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path id="rect2800" d="M 691.27181,434.76322 H 562.84079" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path id="rect2802" d="M 691.27234,355.46658 V 563.14961" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path id="rect2804" d="M 562.8408,355.27506 H 899.21875" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path id="rect2806" d="M 562.84129,563.14958 V 19.397678" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 18.89815,563.1496 V 18.89761" id="path922"/>
-    <path id="path924" d="M 899.02836,562.64954 V 18.897641" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 18.89765,18.897107 H 899.5276" id="path926"/>
-    <path id="path928" d="M 18.89765,563.14909 H 899.52759" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path transform="scale(-1,1)" d="m -661.05231,412.10681 a 7.5542655,7.5516105 0 0 1 7.55426,-7.55161" id="path1028" style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-    <path style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path1030" d="m -661.05276,-412.10736 a 3.7768829,3.7755551 0 0 1 3.77688,-3.77556" transform="scale(-1)"/>
-    <path transform="scale(1,-1)" d="m 653.50534,-412.10101 a 3.7768831,3.7755556 0 0 1 3.77689,-3.77556" id="path1034" style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#6b7280;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+        {/* Background with subtle spiral - moved to right side */}
+        <div className="absolute top-0 bottom-0 right-0 w-1/2 flex items-center justify-center pointer-events-none">
+          <div className="w-full h-full flex items-center justify-center opacity-100">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="700" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+  <path fill="#ffffff" opacity="0.12" d="m178.41 115.87v6.6704q-40.948 10.561-40.948 77.449 0 72.447 50.954 85.231v-107.65q0-23.531 2.9651-34.278 2.9652-10.932 12.97-19.084 10.191-8.3378 24.458-8.3378 25.014 0 46.321 23.531 21.493 23.531 21.493 61.329 0 35.389-22.048 63.182-21.864 27.793-66.147 31.684v76.152h-20.011v-76.152q-38.539-3.3351-61.885-28.719-23.161-25.569-23.161-66.332 0-36.686 21.123-59.847 21.123-23.346 53.918-24.828zm30.016 169.35q58.365-8.7083 58.365-75.411 0-30.757-12.599-51.509-12.414-20.937-29.275-20.937-6.1141 0-10.376 4.4467-4.0749 4.2616-5.1905 10.191-0.92746 5.9292-0.92746 23.346z"/>
 </svg>
 `,
-          }}
-        />
+              }}
+            />
+          </div>
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-24">
           <div className="grid md:grid-cols-[1.618fr_1fr] gap-12 items-center">
@@ -270,14 +243,14 @@ const ServicesPage = () => {
         <div className="p-6 mx-auto">
           <div className="text-center mb-16 relative">
             {/* Subtle Fibonacci spiral watermark */}
-            <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-32 h-32 opacity-5">
+            <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-32 h-32">
               <svg viewBox="0 0 100 100" className="w-full h-full">
                 <path
                   d="M50,50 m0,0 a20,20 0 0,1 20,20 a30,30 0 0,1 -30,30 a50,50 0 0,1 50,50"
                   fill="none"
-                  stroke="currentColor"
+                  stroke="#ffffff"
                   strokeWidth="0.5"
-                  className="text-black"
+                  opacity="0.06"
                 />
               </svg>
             </div>
@@ -295,17 +268,12 @@ const ServicesPage = () => {
           {/* outer grid: left big area + right column */}
 
           <div className="flex flex-row gap-3  ">
-            <div className="relative bg-black w-[900px] aspect-square">
-              <ServiceCard
-                service={services[0]}
-                index={0}
-                hasPlaceholder
-
-              />
+            <div className="bg-black w-[900px] aspect-square">
+              <ServiceCard service={services[0]} index={0} hasPlaceholder />
             </div>
             <div className="flex flex-col gap-3 bg-white  w-[600px] aspect-square">
               <div className="bg-black h-[600px]">
-                <ServiceCard service={services[1]} index={1}  hasPlaceholder/>
+                <ServiceCard service={services[1]} index={1} hasPlaceholder />
               </div>
               <div className="flex flex-row gap-3 bg-white">
                 <div className="bg-black w-[300px] aspect-square">
@@ -382,45 +350,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Testimonial Section - Golden Ratio Layout */}
-      <section className="py-24 px-6 md:px-12 bg-black text-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-[1fr_1.618fr] gap-12 items-center">
-            {/* Left: 38.2% - Image/Avatar placeholder */}
-            <div className="relative aspect-square bg-gray-800 rounded-full overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-6xl font-light opacity-20">ER</div>
-              </div>
-            </div>
-
-            {/* Right: 61.8% - Quote (Golden Ratio) */}
-            <div>
-              <div className="text-white/60 text-xs tracking-[0.3em] mb-6 uppercase">
-                Message de notre équipe
-              </div>
-
-              <blockquote className="text-2xl md:text-3xl font-light leading-relaxed mb-8 italic">
-                « Chaque projet de rénovation est une opportunité de créer
-                quelque chose d'extraordinaire. Nous abordons chaque espace avec
-                un regard neuf et l'engagement de dépasser les attentes. »
-              </blockquote>
-
-              <div>
-                <div className="font-medium mb-1">Emma Rodriguez</div>
-                <div className="text-white/60 text-sm">
-                  Designer d'intérieur principale
-                </div>
-              </div>
-
-              {/* Golden ratio line */}
-              <div
-                className="mt-8 h-[1px] bg-white/20 w-0 animate-expand"
-                style={{ animation: "expand 2s ease-out forwards" }}
-              ></div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       {/* CTA Section */}
       <section className="py-24 px-6 md:px-12 bg-white">
@@ -435,7 +365,7 @@ const ServicesPage = () => {
           </p>
 
           <button className="group relative bg-black text-white px-12 py-6 text-sm font-bold tracking-[0.2em] overflow-hidden transition-all duration-700 hover:px-16">
-            <span className="relative z-10 flex items-center  gap-4 mx-auto justify-center">
+            <span className="relative z-10 flex items-center gap-4 mx-auto justify-center">
               RÉVÉLER VOTRE INTÉRIEUR
               <ArrowRight
                 size={18}
@@ -500,4 +430,4 @@ const ServicesPage = () => {
   );
 };
 
-export default ServicesPage;
+export default PortfolioPage;
