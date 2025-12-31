@@ -21,48 +21,48 @@ const ServiceCard = ({
   imageUrl?: string;
 }) => {
   const [active, setActive] = useState<number | null>(null);
-  
+
+  // Use a full-height flex column so percentages are relative to the parent size
+  // Image area uses flex-basis (default 45%) and content uses flex-1 with overflow auto.
+  const imageFlexBasis = imageHeight || "45%";
+
   return (
     <div
-      className={`${className} relative group cursor-pointer overflow-hidden rounded-sm aspect-square transition-all duration-700 ease-out hover:shadow-2xl hover:z-10`}
+      className={`${className} relative group cursor-pointer overflow-hidden rounded-sm transition-all duration-700 ease-out hover:shadow-2xl hover:z-10 h-full flex flex-col`}
       onMouseEnter={() => setActive(index)}
       onMouseLeave={() => setActive(null)}
     >
       {/* base dark overlay */}
       <div className="absolute inset-0 bg-black transition-transform duration-1000 group-hover:scale-110 z-0" />
 
-      {/* Image - Fixed at top - Now 45% instead of 60% */}
+      {/* Image area (top) - uses flex-basis so it always occupies a percentage of the parent's height */}
       {imageUrl ? (
         <div
-          className="absolute top-0 left-0 right-0 z-10 overflow-hidden"
+          className="w-full overflow-hidden z-10"
           style={{
-            height: imageHeight || '45%',
+            flexBasis: imageFlexBasis,
           }}
         >
           <img
             src={imageUrl}
             alt={service?.title ?? "service image"}
             className="w-full h-full object-cover"
+            style={{ height: "100%" }}
           />
         </div>
       ) : hasPlaceholder ? (
         <div
-          className="absolute top-0 left-0 right-0 flex items-center justify-center border border-white/10 text-white/60 text-sm font-medium pointer-events-none z-10"
+          className="w-full flex items-center justify-center border border-white/10 text-white/60 text-sm font-medium pointer-events-none z-10"
           style={{
-            height: imageHeight || '45%',
+            flexBasis: imageFlexBasis,
           }}
         >
           Image
         </div>
       ) : null}
 
-      {/* Content - Now takes 55% with hidden scrollbar */}
-      <div 
-        className="absolute left-0 right-0 bottom-0 p-6 md:p-8 z-20 overflow-y-auto scrollbar-hide"
-        style={{
-          top: imageHeight || imageUrl || hasPlaceholder ? '45%' : '0',
-        }}
-      >
+      {/* Content area (bottom) - fills remaining space and scrolls when needed */}
+      <div className="p-6 md:p-8 z-20 overflow-y-auto scrollbar-hide flex-1">
         <div className="transform transition-transform duration-500 group-hover:scale-105">
           <h3
             className={`text-white font-light mb-4 transition-all duration-500 group-hover:tracking-wide ${
@@ -318,6 +318,7 @@ const ServicesPage = () => {
                 service={services[0]}
                 index={0}
                 hasPlaceholder
+                imageHeight="50%"
                 imageUrl="https://blog.buyerselect.com/wp-content/uploads/2021/01/martha-ohara-interior-design.jpg" // <-- add your image URL here
               />
             </div>
@@ -489,49 +490,49 @@ const ServicesPage = () => {
         </div>
       </section>
 
-    <style jsx>{`
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: scale(0.8);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
 
-  @keyframes expand {
-    from {
-      width: 0%;
-    }
-    to {
-      width: 100%;
-    }
-  }
+        @keyframes expand {
+          from {
+            width: 0%;
+          }
+          to {
+            width: 100%;
+          }
+        }
 
-  @keyframes dash {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
+        @keyframes dash {
+          to {
+            stroke-dashoffset: 0;
+          }
+        }
 
-  .animate-dash {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: dash 2s ease-out forwards;
-  }
+        .animate-dash {
+          stroke-dasharray: 500;
+          stroke-dashoffset: 500;
+          animation: dash 2s ease-out forwards;
+        }
 
-  /* Hide scrollbar but keep functionality */
-  .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-  
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari, Opera */
-  }
-`}</style>
+        /* Hide scrollbar but keep functionality */
+        .scrollbar-hide {
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, Opera */
+        }
+      `}</style>
     </div>
   );
 };

@@ -21,62 +21,61 @@ const ServiceCard = ({
   imageUrl?: string;
 }) => {
   const [active, setActive] = useState<number | null>(null);
-  
+
+  // Make the card fill its parent and use a column flex layout so flex-basis (percent) works
+  const imageFlexBasis = imageHeight || "60%";
+
   return (
     <div
-      className={`${className} relative group cursor-pointer overflow-hidden rounded-sm aspect-square transition-all duration-700 ease-out hover:shadow-2xl hover:z-10`}
+      className={`${className} relative group cursor-pointer overflow-hidden rounded-sm transition-all duration-700 ease-out hover:shadow-2xl hover:z-10 h-full flex flex-col`}
       onMouseEnter={() => setActive(index)}
       onMouseLeave={() => setActive(null)}
     >
       {/* base dark overlay */}
       <div className="absolute inset-0 bg-black transition-transform duration-1000 group-hover:scale-110 z-0" />
 
-      {/* Image - Fixed at top with absolute positioning */}
+      {/* Image area uses flex-basis so it scales with parent height (prevents collapse on zoom) */}
       {imageUrl ? (
         <div
-          className="absolute top-0 left-0 right-0 z-10 overflow-hidden"
+          className="w-full overflow-hidden z-10"
           style={{
-            height: imageHeight || '60%',
+            flexBasis: imageFlexBasis,
           }}
         >
           <img
             src={imageUrl}
             alt={service?.title ?? "service image"}
             className="w-full h-full object-cover"
+            style={{ height: "100%" }}
           />
         </div>
       ) : hasPlaceholder ? (
         <div
-          className="absolute top-0 left-0 right-0 flex items-center justify-center border border-white/10 text-white/60 text-sm font-medium pointer-events-none z-10"
+          className="w-full flex items-center justify-center border border-white/10 text-white/60 text-sm font-medium pointer-events-none z-10"
           style={{
-            height: imageHeight || '60%',
+            flexBasis: imageFlexBasis,
           }}
         >
           Image
         </div>
       ) : null}
 
-      {/* Content - Fixed at bottom with absolute positioning */}
-      <div 
-  className="absolute left-0 right-0 bottom-0 p-6 md:p-8 z-20 flex flex-col"
-  style={{
-    top: imageHeight || imageUrl || hasPlaceholder ? '60%' : '0',
-  }}
->
-  <div className="transform transition-transform duration-500 group-hover:scale-105 h-full overflow-y-auto">
-    <h3
-      className={`text-white font-light mb-4 transition-all duration-500 group-hover:tracking-wide ${
-        index % 5 === 2 ? "text-3xl md:text-4xl" : "text-2xl md:text-3xl"
-      }`}
-    >
-      {service.title}
-    </h3>
+      {/* Content area fills remaining space and scrolls when needed */}
+      <div className="p-6 md:p-8 z-20 overflow-y-auto scrollbar-hide flex-1">
+        <div className="transform transition-transform duration-500 group-hover:scale-105">
+          <h3
+            className={`text-white font-light mb-4 transition-all duration-500 group-hover:tracking-wide ${
+              index % 5 === 2 ? "text-3xl md:text-4xl" : "text-2xl md:text-3xl"
+            }`}
+          >
+            {service.title}
+          </h3>
 
-    <p className="text-white/70 leading-relaxed transition-all duration-700 whitespace-pre-line text-sm md:text-base">
-      {service.description.trim()}
-    </p>
-  </div>
-</div>
+          <p className="text-white/70 leading-relaxed transition-all duration-700 whitespace-pre-line text-sm md:text-base">
+            {service.description.trim()}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
