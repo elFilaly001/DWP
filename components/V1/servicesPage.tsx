@@ -457,7 +457,7 @@ const ServicesPage = () => {
       {/* CTA Section */}
       <section className="py-24 px-6 md:px-12 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl md:text-7xl text-gray-500 font-light mb-8">
+          <h2 className="text-5xl md:text-7xl text-black font-light mb-8">
             Envie de rénover ?
           </h2>
 
@@ -466,7 +466,7 @@ const ServicesPage = () => {
             consultation gratuite dès aujourd'hui.
           </p>
 
-          <button className="group relative bg-black text-white px-12 py-6 text-sm font-bold tracking-[0.2em] overflow-hidden transition-all duration-700 hover:px-16">
+          <button className="group relative bg-[#cbe425] text-black px-12 py-6 text-sm font-bold tracking-[0.2em] overflow-hidden transition-all duration-700 hover:px-16">
             <span className="relative z-10 flex items-center  gap-4 mx-auto justify-center">
               RÉVÉLER VOTRE INTÉRIEUR
               <ArrowRight

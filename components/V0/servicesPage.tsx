@@ -449,7 +449,7 @@ const ServicesPage = () => {
       {/* CTA Section */}
       <section className="py-24 px-6 md:px-12 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl md:text-7xl text-gray-500 font-light mb-8">
+          <h2 className="text-5xl md:text-7xl text-black font-light mb-8">
             Envie de rénover ?
           </h2>
 
