@@ -31,12 +31,12 @@ const ServiceCard = ({
       {/* base dark overlay */}
       <div className="absolute inset-0 bg-black transition-transform duration-1000 group-hover:scale-110 z-0" />
 
-      {/* Image - Fixed at top with absolute positioning */}
+      {/* Image - Fixed at top - Now 45% instead of 60% */}
       {imageUrl ? (
         <div
           className="absolute top-0 left-0 right-0 z-10 overflow-hidden"
           style={{
-            height: imageHeight || '60%',
+            height: imageHeight || '45%',
           }}
         >
           <img
@@ -49,18 +49,18 @@ const ServiceCard = ({
         <div
           className="absolute top-0 left-0 right-0 flex items-center justify-center border border-white/10 text-white/60 text-sm font-medium pointer-events-none z-10"
           style={{
-            height: imageHeight || '60%',
+            height: imageHeight || '45%',
           }}
         >
           Image
         </div>
       ) : null}
 
-      {/* Content - Fixed at bottom with absolute positioning */}
+      {/* Content - Now takes 55% with hidden scrollbar */}
       <div 
-        className="absolute bottom-0 left-0 right-0 p-6 md:p-8 overflow-y-auto z-20"
+        className="absolute left-0 right-0 bottom-0 p-6 md:p-8 z-20 overflow-y-auto scrollbar-hide"
         style={{
-          height: imageHeight || imageUrl || hasPlaceholder ? '40%' : '100%',
+          top: imageHeight || imageUrl || hasPlaceholder ? '45%' : '0',
         }}
       >
         <div className="transform transition-transform duration-500 group-hover:scale-105">
@@ -72,8 +72,8 @@ const ServiceCard = ({
             {service.title}
           </h3>
 
-          <p className="text-white/70 leading-relaxed transition-all duration-700 whitespace-pre-line">
-            {service.description}
+          <p className="text-white/70 leading-relaxed transition-all duration-700 whitespace-pre-line text-sm md:text-base">
+            {service.description.trim()}
           </p>
         </div>
       </div>
@@ -103,7 +103,6 @@ const ServicesPage = () => {
       title: "Rénovation de cuisine",
       description: `
         Transformez votre cuisine en un paradis culinaire avec des appareils modernes, des rangements sur mesure et des finitions élégantes.
-        Notre expertise en rénovation culinaire combine fonctionnalité professionnelle et design sophistiqué pour créer des espaces qui inspirent la créativité et facilitent le travail quotidien. Que vous souhaitiez moderniser une cuisine existante ou la réinventer complètement, nous intégrons des solutions innovantes adaptées à vos besoins spécifiques. Des systèmes d'éclairage LED stratégiquement positionnés aux surfaces de travail durables et hygiéniques, chaque détail est méticuleusement planifié pour optimiser l'efficacité et l'esthétique.
         `,
       featured: true,
       size: "large",
@@ -490,39 +489,49 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: scale(0.8);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
+    <style jsx>{`
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 
-        @keyframes expand {
-          from {
-            width: 0%;
-          }
-          to {
-            width: 100%;
-          }
-        }
+  @keyframes expand {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
 
-        @keyframes dash {
-          to {
-            stroke-dashoffset: 0;
-          }
-        }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
 
-        .animate-dash {
-          stroke-dasharray: 500;
-          stroke-dashoffset: 500;
-          animation: dash 2s ease-out forwards;
-        }
-      `}</style>
+  .animate-dash {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: dash 2s ease-out forwards;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+  }
+`}</style>
     </div>
   );
 };

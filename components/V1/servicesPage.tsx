@@ -58,25 +58,25 @@ const ServiceCard = ({
 
       {/* Content - Fixed at bottom with absolute positioning */}
       <div 
-        className="absolute bottom-0 left-0 right-0 p-6 md:p-8 overflow-y-auto z-20"
-        style={{
-          height: imageHeight || imageUrl || hasPlaceholder ? '40%' : '100%',
-        }}
-      >
-        <div className="transform transition-transform duration-500 group-hover:scale-105">
-          <h3
-            className={`text-white font-light mb-4 transition-all duration-500 group-hover:tracking-wide ${
-              index % 5 === 2 ? "text-3xl md:text-4xl" : "text-2xl md:text-3xl"
-            }`}
-          >
-            {service.title}
-          </h3>
+  className="absolute left-0 right-0 bottom-0 p-6 md:p-8 z-20 flex flex-col"
+  style={{
+    top: imageHeight || imageUrl || hasPlaceholder ? '60%' : '0',
+  }}
+>
+  <div className="transform transition-transform duration-500 group-hover:scale-105 h-full overflow-y-auto">
+    <h3
+      className={`text-white font-light mb-4 transition-all duration-500 group-hover:tracking-wide ${
+        index % 5 === 2 ? "text-3xl md:text-4xl" : "text-2xl md:text-3xl"
+      }`}
+    >
+      {service.title}
+    </h3>
 
-          <p className="text-white/70 leading-relaxed transition-all duration-700 whitespace-pre-line">
-            {service.description}
-          </p>
-        </div>
-      </div>
+    <p className="text-white/70 leading-relaxed transition-all duration-700 whitespace-pre-line text-sm md:text-base">
+      {service.description.trim()}
+    </p>
+  </div>
+</div>
     </div>
   );
 };
@@ -103,7 +103,6 @@ const ServicesPage = () => {
       title: "Rénovation de cuisine",
       description: `
         Transformez votre cuisine en un paradis culinaire avec des appareils modernes, des rangements sur mesure et des finitions élégantes.
-        Notre expertise en rénovation culinaire combine fonctionnalité professionnelle et design sophistiqué pour créer des espaces qui inspirent la créativité et facilitent le travail quotidien. Que vous souhaitiez moderniser une cuisine existante ou la réinventer complètement, nous intégrons des solutions innovantes adaptées à vos besoins spécifiques. Des systèmes d'éclairage LED stratégiquement positionnés aux surfaces de travail durables et hygiéniques, chaque détail est méticuleusement planifié pour optimiser l'efficacité et l'esthétique.
         `,
       featured: true,
       size: "large",
