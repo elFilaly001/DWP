@@ -87,3 +87,17 @@ body {
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
+
+/* Light shimmer animation */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s ease-in-out infinite;
+}

@@ -41,11 +41,15 @@ const Navbar = () => {
       <div className="flex items-center justify-between w-full max-w-[1400px] mx-auto">
        
         <Link href="/" className="relative z-10 group">
-          <img
-            src="/LOGO/DWP-logo.png"
-            alt="DWP logo"
-            className="h-18 w-auto transition-all duration-700 group-hover:scale-110 group-hover:rotate-3 group-hover:drop-shadow-[0_0_15px_rgba(203,228,37,0.5)] animate-float"
-          />
+          <div className="relative overflow-hidden">
+            <img
+              src="/LOGO/DWP-logo.png"
+              alt="DWP logo"
+              className="h-18 w-auto transition-all duration-700 group-hover:scale-110 group-hover:rotate-3 group-hover:drop-shadow-[0_0_20px_rgba(203,228,37,0.6)]"
+            />
+            {/* Light shimmer effect */}
+            <span className="absolute inset-0 animate-shimmer bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full pointer-events-none" />
+          </div>
         </Link>
 
         {/* Desktop Nav with Fibonacci hover spacing */}
