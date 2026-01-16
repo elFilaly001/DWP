@@ -44,7 +44,7 @@ const Navbar = () => {
           <img
             src="/LOGO/DWP-logo.png"
             alt="DWP logo"
-            className="h-18 w-auto transition-all duration-500 group-hover:scale-105"
+            className="h-18 w-auto transition-all duration-700 group-hover:scale-110 group-hover:rotate-3 group-hover:drop-shadow-[0_0_15px_rgba(203,228,37,0.5)] animate-float"
           />
         </Link>
 

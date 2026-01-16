@@ -274,8 +274,8 @@ const ServicesPage = () => {
               <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed mb-12 max-w-xl">
                 Chaque projet suit les principes du nombre d'or. Design
                 mathématiquement parfait, résultats naturellement harmonieux.
-              </p>npm run dev
-              
+              </p>
+
 
               <button className="group relative bg-[#cbe425] text-black px-10 py-5 text-sm font-bold tracking-[0.2em] overflow-hidden transition-all duration-700 hover:px-12">
                 <span className="relative z-10 flex items-center gap-3">
