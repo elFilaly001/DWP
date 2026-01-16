@@ -10,6 +10,7 @@ const ServiceCard = ({
   hasPlaceholder = false,
   imageHeight,
   imageWidth,
+  imageUrl,
 }: {
   service: any;
   index: number;
@@ -17,6 +18,7 @@ const ServiceCard = ({
   hasPlaceholder?: boolean;
   imageHeight?: string; // CSS height (e.g. '200px' or '60%')
   imageWidth?: string; // CSS width (e.g. '100%' or '300px')
+  imageUrl?: string;
 }) => {
   const [active, setActive] = useState<number | null>(null);
   return (
@@ -28,8 +30,18 @@ const ServiceCard = ({
       {/* base dark overlay (behind placeholder/content) */}
       <div className="absolute inset-0 bg-black transition-transform duration-1000 group-hover:scale-110 z-0" />
 
+      {/* Render image if imageUrl is provided */}
+      {imageUrl && (
+        <img
+          src={imageUrl}
+          alt={service.title}
+          className="absolute top-0 left-0 w-full h-[60%] object-cover z-10 opacity-80"
+          style={{ height: imageHeight ?? undefined, width: imageWidth ?? undefined }}
+        />
+      )}
+
       {/* decorative placeholder rendered in-flow at the top when requested */}
-      {hasPlaceholder && (
+      {hasPlaceholder && !imageUrl && (
         <div
           className={`flex items-center justify-center border border-white/10 text-white/60 text-sm font-medium pointer-events-none relative z-10 ${
             imageHeight || imageWidth ? "" : "w-full h-[60%]"
