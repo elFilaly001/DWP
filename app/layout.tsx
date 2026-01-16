@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import React from "react";
-import ClientNavSwitcher from "@/components/V0/ClientNavSwitcher";
+// import Navbar from "@/components/V1/nav1";
+import Nav1 from "@/components/V1/nav1";
+// import Nav1 from "@/components/V0/navbar";
+// import Navbar from "@/components/V0/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +32,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ClientNavSwitcher />
+        {/* <Navbar /> */}
+        <Nav1 />
         {children}
       </body>
     </html>

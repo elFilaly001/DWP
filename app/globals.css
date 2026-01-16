@@ -25,3 +25,51 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Letter reveal animation - teasing effect */
+@keyframes letterReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) rotateX(90deg);
+    filter: blur(8px);
+  }
+  50% {
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+    filter: blur(0);
+  }
+}
+
+/* Word reveal animation for italic text */
+@keyframes wordReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  60% {
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Count-up number pop animation */
+@keyframes countPop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

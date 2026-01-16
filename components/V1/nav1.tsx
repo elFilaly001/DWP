@@ -2,6 +2,12 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { Gloria_Hallelujah } from "next/font/google";
+
+const gloriaHallelujah = Gloria_Hallelujah({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,10 +21,10 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "ACCUEIL", href: "/V1/V1home" },
-    { name: "SERVICES", href: "/V1/services" },
-    { name: "PORTFOLIO", href: "/V1/portfolio" },
-    { name: "BLOG", href: "/V1/blog" },
+    { name: "ACCUEIL", href: "/home" },
+    { name: "EXPERTISE", href: "/expertise" },
+    { name: "PORTFOLIO", href: "/portfolio" },
+    { name: "BLOG", href: "/blog" },
   ];
 
   // Fibonacci sequence for stagger animation delays
@@ -38,7 +44,7 @@ const Navbar = () => {
           <img
             src="/LOGO/DWP-logo.png"
             alt="DWP logo"
-            className="h-12 w-auto transition-all duration-500 group-hover:scale-105"
+            className="h-18 w-auto transition-all duration-500 group-hover:scale-105"
           />
         </Link>
 
@@ -86,13 +92,13 @@ const Navbar = () => {
         {/* CTA Button with Golden Ratio expansion */}
         <a
           href="#contact"
-          className="hidden md:block relative overflow-hidden bg-[#cbe425] text-black px-8 py-3 text-xs font-bold tracking-[0.15em] transition-all duration-700 hover:tracking-[0.3em] group"
+          className="hidden md:block relative overflow-hidden bg-[#cbe425] text-black px-8 py-3 transition-all duration-700 group"
         >
-          <span className="relative z-10">Révéler votre intérieur</span>
+          <span className={`relative z-10 text-lg ${gloriaHallelujah.className}`}>Design with purpose</span>
           {/* Golden ratio expanding background */}
           <span className="absolute inset-0 bg-black transition-all duration-700 origin-left scale-x-0 group-hover:scale-x-100"></span>
-          <span className="absolute inset-0 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 text-[#cbe425]">
-            Révéler votre intérieur
+          <span className={`absolute inset-0 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 text-[#cbe425] text-lg ${gloriaHallelujah.className}`}>
+            Design with purpose
           </span>
         </a>
 

@@ -142,38 +142,52 @@ const ServicesPage = () => {
   const process = [
     {
       number: "01",
-      title: "Consultation",
+      title: "Rencontre",
       description:
-        "Nous commençons par une discussion approfondie pour comprendre votre vision, vos besoins et votre budget.",
+        "Tout projet débute par une rencontre. Un temps d’échange essentiel pour comprendre votre vision, vos usages, vos contraintes et vos ambitions, et poser les bases d’une collaboration claire et sereine.",
       fibonacci: 1,
     },
     {
       number: "02",
-      title: "Conception",
+      title: "Analyse & intention",
       description:
-        "Notre équipe élabore des concepts détaillés et des visualisations 3D pour votre validation.",
+        "Nous analysons le lieu, son contexte et son potentiel. Cette phase permet de définir une intention forte, en alignant identité, fonctionnalité et sens, afin de donner une direction claire au projet.",
       fibonacci: 1,
     },
     {
       number: "03",
-      title: "Planification",
+      title: "Concept & narration",
       description:
-        "Nous développons des plans complets, sélectionnons les matériaux et établissons le calendrier.",
+        "Nous traduisons l’intention en concept. Ambiances, lignes directrices et partis pris esthétiques prennent forme pour construire une narration cohérente et élégante autour de l’espace.",
       fibonacci: 2,
     },
     {
       number: "04",
-      title: "Exécution",
+      title: "Définition des espaces",
       description:
-        "Nos artisans qualifiés donnent vie au projet avec précision et soin.",
+        "Le concept est ensuite structuré et rationalisé. Organisation des volumes, parcours, matériaux et premières orientations techniques sont définis pour assurer l’équilibre entre design, usage et faisabilité.",
       fibonacci: 3,
     },
     {
       number: "05",
+      title: "Coordination & mise en œuvre",
+      description:
+        "Nous accompagnons le projet dans sa phase de réalisation. La coordination des intervenants, le suivi des choix et le contrôle de la qualité garantissent le respect de la vision initiale à chaque étape.",
+      fibonacci: 5,
+    },
+    {
+      number: "06",
+      title: "Ajustements & finitions",
+      description:
+        "Chaque détail compte. Nous affinons, ajustons et veillons à la cohérence globale du projet, afin d’atteindre un niveau de finition à la hauteur des exigences définies.",
+      fibonacci: 8,
+    },
+    {
+      number: "07",
       title: "Livraison",
       description:
-        "Visite finale, contrôle qualité et remise de votre espace transformé.",
-      fibonacci: 5,
+        "Le projet est livré dans sa forme finale. Un espace abouti, prêt à être vécu, fidèle à l’intention de départ et pensé pour durer.",
+      fibonacci: 13,
     },
   ];
 
@@ -260,7 +274,8 @@ const ServicesPage = () => {
               <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed mb-12 max-w-xl">
                 Chaque projet suit les principes du nombre d'or. Design
                 mathématiquement parfait, résultats naturellement harmonieux.
-              </p>
+              </p>npm run dev
+              
 
               <button className="group relative bg-[#cbe425] text-black px-10 py-5 text-sm font-bold tracking-[0.2em] overflow-hidden transition-all duration-700 hover:px-12">
                 <span className="relative z-10 flex items-center gap-3">
@@ -301,7 +316,7 @@ const ServicesPage = () => {
             </div>
 
             <h2 className="text-5xl md:text-7xl font-light text-black mb-6 tracking-tight">
-              Nos prestations
+              Nos solutions
             </h2>
 
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -359,10 +374,10 @@ const ServicesPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-7xl text-black font-sans mb-6">
-              Notre méthode
+              Notre méthodologie
             </h2>
             <p className="text-gray-600 text-lg">
-              Un processus en 5 étapes suivant la séquence de Fibonacci
+              Une approche structurée, pensée pour créer des espaces justes, durables et singuliers
             </p>
           </div>
 
@@ -458,7 +473,7 @@ const ServicesPage = () => {
       <section className="py-24 px-6 md:px-12 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl md:text-7xl text-black font-light mb-8">
-            Envie de rénover ?
+            Envie de rêver ?
           </h2>
 
           <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
@@ -481,10 +496,16 @@ const ServicesPage = () => {
 
           {/* Fibonacci dots indicator */}
           <div className="flex gap-3 justify-center mt-12">
-            {[8, 13, 21, 13, 8].map((size, i) => (
+            {(
+              [
+                8, 13, 21, 28, 21, 13, 8 // symmetric, 28px center
+              ] as const
+            ).map((size, i, arr) => (
               <div
                 key={i}
-                className="bg-gray-300 transition-all duration-500 hover:bg-black cursor-pointer"
+                className={`bg-gray-300 transition-all duration-500 hover:bg-black cursor-pointer ${
+                  i === Math.floor(arr.length / 2) ? "shadow-lg scale-110" : ""
+                }`}
                 style={{
                   width: `${size}px`,
                   height: `${size}px`,

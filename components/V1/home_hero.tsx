@@ -3,6 +3,48 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { redirect } from 'next/navigation';
 
+// Animated letter component
+const AnimatedLetter = ({ letter, delay }: { letter: string; delay: number }) => (
+    <span
+        className="inline-block opacity-0 translate-y-12 blur-sm animate-[letterReveal_0.8s_ease-out_forwards]"
+        style={{ animationDelay: `${delay}ms` }}
+    >
+        {letter === ' ' ? '\u00A0' : letter}
+    </span>
+);
+
+// Animated word component for the italic line
+const AnimatedWord = ({ word, delay }: { word: string; delay: number }) => (
+    <span
+        className="inline-block opacity-0 translate-y-8 animate-[wordReveal_1s_ease-out_forwards] mr-[0.3em]"
+        style={{ animationDelay: `${delay}ms` }}
+    >
+        {word}
+    </span>
+);
+
+// Animated count-up component
+const AnimatedCount = ({ target, duration = 1200, suffix = '' }: { target: number; duration?: number; suffix?: string }) => {
+    const [count, setCount] = useState(0);
+    useEffect(() => {
+        let start = 0;
+        const increment = target / (duration / 16);
+        let raf: number;
+        const step = () => {
+            start += increment;
+            if (start < target) {
+                setCount(Math.floor(start));
+                raf = requestAnimationFrame(step);
+            } else {
+                setCount(target);
+            }
+        };
+        raf = requestAnimationFrame(step);
+        return () => cancelAnimationFrame(raf);
+    }, [target, duration]);
+    return <span className="inline-block animate-[countPop_0.8s_ease]">{count}{suffix}</span>;
+};
+
 export default function HeroFibo() {
     const [isReady, setIsReady] = useState(false);
     const [showScroll, setShowScroll] = useState(false);
@@ -68,10 +110,34 @@ export default function HeroFibo() {
                     }`}>
 
                
-                    <h1 className="text-white font-serif text-[clamp(56px,10vw,144px)] leading-[0.95] mb-8 tracking-tight">
-                        Ton intérieur,
-                        <br />
-                        <span className="font-normal italic">en mieux.</span>
+                    <h1 className="text-white font-serif text-[clamp(72px,10vw,144px)] leading-[0.95] mb-16 tracking-tight">
+                        {/* First line - letter by letter reveal, but words wrapped to avoid breaking */}
+                        {/* <span className="block">
+                            {"  "
+                                .split(' ')
+                                .map((word, wi) => (
+                                    <span key={wi} style={{ display: 'inline-block', whiteSpace: 'pre' }}>
+                                        {word.split('').map((letter, i) => (
+                                            <AnimatedLetter key={wi + '-' + i} letter={letter} delay={500 + (wi * 10 + i) * 50} />
+                                        ))}
+                                        {wi < 3 && <span style={{ display: 'inline-block', width: '0.4em' }} />}
+                                    </span>
+                                ))}
+                        </span> */}
+                        {/* Second line - word by word reveal with italic */}
+                        <span className="font-normal italic block text-[clamp(44px,6vw,89px)]">
+                            {["L’art", "royal"].map((word, i) => (
+                                <AnimatedWord key={i} word={word} delay={1800 + i * 200} />
+                            ))}
+                            <span className="text-[#cbe425]">
+                                {["une", "harmonie"].map((word, i) => (
+                                    <AnimatedWord key={2 + i} word={word} delay={1800 + (2 + i) * 200} />
+                                ))}
+                            </span>
+                            {["juste", "et", "parfaite."].map((word, i) => (
+                                <AnimatedWord key={4 + i} word={word} delay={1800 + (4 + i) * 200} />
+                            ))}
+                        </span>
                     </h1>
 
                     <div className="w-24 h-[1px] bg-white/40 mx-auto mb-8"></div>
@@ -111,13 +177,17 @@ export default function HeroFibo() {
 
                 {/* Project Count - Golden Ratio positioned (optional) */}
                 <div className="absolute bottom-12 right-12 text-white/50 text-right hidden md:block">
-                    <div className="text-4xl font-light mb-1">500+</div>
+                    <div className="text-4xl font-light mb-1">
+                        <AnimatedCount target={500} suffix="+" />
+                    </div>
                     <div className="text-xs tracking-[0.2em]">PROJETS RÉALISÉS</div>
                 </div>
 
                 {/* Years - Golden Ratio positioned (optional) */}
                 <div className="absolute bottom-12 left-12 text-white/50 text-left hidden md:block">
-                    <div className="text-4xl font-light mb-1">15+</div>
+                    <div className="text-4xl font-light mb-1">
+                        <AnimatedCount target={20} suffix="+" />
+                    </div>
                     <div className="text-xs tracking-[0.2em]">ANNÉES D'EXPERTISE</div>
                 </div>
             </section>
