@@ -6,6 +6,4 @@ import Nav1 from "@/components/V1/nav1";
 
 export default function ClientNavSwitcher() {
   const pathname = usePathname();
-
-  // return pathname?.includes("/V1") ? <Nav1 /> : <Navbar />;
 }
