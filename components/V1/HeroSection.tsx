@@ -4,10 +4,11 @@ export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-black overflow-hidden">
       {/* Background with subtle spiral */}
-      <div
-        className="absolute inset-0 opacity-20 w-full h-full flex items-center justify-center "
-        dangerouslySetInnerHTML={{
-          __html: `
+      <div className="absolute inset-0 opacity-20 flex items-center justify-center">
+        <div
+          className="w-full md:w-[50%] h-full flex items-center justify-center"
+          dangerouslySetInnerHTML={{
+            __html: `
 <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 915 580" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" id="svg2">
     <metadata id="metadata7"></metadata>
     <defs id="defs5"/>
@@ -42,8 +43,9 @@ export const HeroSection = () => {
     <path transform="scale(1,-1)" d="m 653.50534,-412.10101 a 3.7768831,3.7755556 0 0 1 3.77689,-3.77556" id="path1034" style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#c5d558;stroke-width:2.66666667;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
 </svg>
 `,
-        }}
-      />
+          }}
+        />
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-12 sm:py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-[1.618fr_1fr] gap-8 md:gap-12 items-center">

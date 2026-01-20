@@ -120,7 +120,7 @@ export default function HeroFibo() {
           transition={{ duration: 1 }}
         >
           <motion.h1
-            className={`text-white ${cormorant.className} text-[clamp(44px,6vw,89px)] leading-[1.1] mb-16 tracking-tight`}
+            className={`text-white ${cormorant.className} text-[clamp(44px,6vw,89px)] leading-[1.1] mb-6 tracking-tight`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.3 }}
@@ -136,7 +136,7 @@ export default function HeroFibo() {
 
           <div className="w-24 h-[1px] bg-white/40 mx-auto mb-8"></div>
 
-          <p className="text-white/70 text-base md:text-xl font-light mb-16 tracking-wide max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/70 text-base md:text-xl font-light mb-10 tracking-wide max-w-2xl mx-auto leading-relaxed">
             L'innovation dans chaque ligne.
             <br />
             Solidité dans chaque réalisation.

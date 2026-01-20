@@ -71,14 +71,14 @@ const ServicesPage = () => {
     },
     {
       number: "02",
-      title: "Analyse & intention",
+      title: "Intention",
       description:
         "Nous analysons le lieu, son contexte et son potentiel. Cette phase permet de définir une intention forte, en alignant identité, fonctionnalité et sens, afin de donner une direction claire au projet.",
       fibonacci: 1,
     },
     {
       number: "03",
-      title: "Concept & narration",
+      title: "Narration",
       description:
         "Nous traduisons l’intention en concept. Ambiances, lignes directrices et partis pris esthétiques prennent forme pour construire une narration cohérente et élégante autour de l’espace.",
       fibonacci: 2,
@@ -92,23 +92,30 @@ const ServicesPage = () => {
     },
     {
       number: "05",
-      title: "Coordination & mise en œuvre",
+      title: "Coordination ",
       description:
         "Nous accompagnons le projet dans sa phase de réalisation. La coordination des intervenants, le suivi des choix et le contrôle de la qualité garantissent le respect de la vision initiale à chaque étape.",
       fibonacci: 5,
     },
     {
       number: "06",
-      title: "Ajustements & finitions",
+      title: "Finitions",
       description:
         "Chaque détail compte. Nous affinons, ajustons et veillons à la cohérence globale du projet, afin d’atteindre un niveau de finition à la hauteur des exigences définies.",
       fibonacci: 8,
     },
     {
       number: "07",
-      title: "Livraison",
+      title: "Détails ",
       description:
-        "Le projet est livré dans sa forme finale. Un espace abouti, prêt à être vécu, fidèle à l’intention de départ et pensé pour durer.",
+        "Les détails viennent parfaire le projet. Finitions, matériaux et éléments sur mesure sont ajustés avec précision pour garantir une cohérence globale.",
+      fibonacci: 13,
+    },
+    {
+      number: "08",
+      title: "Révélation",
+      description:
+        "Le projet est livré dans sa forme aboutie. Un espace prêt à être vécu, fidèle à l’intention initiale et révélant pleinement l’identité du lieu.",
       fibonacci: 13,
     },
   ];
