@@ -1,6 +1,9 @@
+import { useInView } from "../../lib/useInView";
+
 export const TestimonialSection = () => {
+  const [ref, inView] = useInView({ threshold: 0.15 });
   return (
-    <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-black text-white relative overflow-hidden">
+    <section ref={ref} className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-black text-white relative overflow-hidden">
       {/* Decorative SVG Background Elements */}
       {/* <div className="absolute top-10 right-20 w-32 h-32 opacity-10 rotate-12 pointer-events-none">
         <svg viewBox="0 0 512 512" className="w-full h-full" fill="#c5d558">
@@ -116,43 +119,43 @@ export const TestimonialSection = () => {
       </div> */}
 
       <div className="max-w-5xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.618fr] gap-8 sm:gap-10 md:gap-12 items-center">
-          {/* Left: 38.2% - Image/Avatar placeholder */}
-          <div className="relative aspect-square max-w-[280px] sm:max-w-[320px] md:max-w-none mx-auto md:mx-0 bg-gray-800 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900"></div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <img
-                src="/Gemini_Generated_Image_59ewwk59ewwk59ew.png"
-                alt="design team member"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Right: 61.8% - Quote (Golden Ratio) */}
-          <div className="text-center md:text-left">
+        <div className="flex justify-center">
+          {/* Quote Section */}
+          <div
+            className={`text-center max-w-5xl transition-all duration-[3000ms] ease-out
+              ${inView
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 -translate-x-12 sm:translate-x-12"}`}
+          >
             <div className="text-white/60 text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] mb-4 sm:mb-6 uppercase">
-              Message de notre équipe
+              Mot du président
             </div>
 
             <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light leading-relaxed mb-6 sm:mb-8 italic">
-              « Chaque projet de rénovation est une opportunité de créer quelque
-              chose d'extraordinaire. Nous abordons chaque espace avec un regard
-              neuf et l'engagement de dépasser les attentes. »
+              « Prenez de l’harmonie,
+Rajoutez une pincée d’amour, 
+Allumez la lumière, 
+Voici les ingrédients d’une belle architecture d’intérieure.
+Au-delà d’une passion qui devient un métier,
+Au-delà des mots et des définitions des dictionnaires,
+Le Design est comme une croyance : on l’adopte comme mode de vie au quotidien.
+A travers nos cinq sens, on se nourrit de la plus grande source d’inspiration : « LA NATURE ». 
+Cette nature qui se livre à nous dans un beau spectacle de matière, une explosion de couleurs, une fusion de formes irrégulières mais parfaites, une hymne qu’on écoute religieusement dans cette danse des vents.
+Nous ne sommes pas ce que nous possédons; nous sommes ce que nous faisons, ce que nous aimons. »
             </blockquote>
 
             <div>
               <div className="font-medium mb-1 text-sm sm:text-base">
-                Carlos Rodriguez
+                Chefchaouni Hamza
               </div>
               <div className="text-white/60 text-xs sm:text-sm">
-                Designer d'intérieur principale
+                PDG
               </div>
             </div>
 
             {/* Golden ratio line */}
             <div
-              className="mt-6 sm:mt-8 h-[1px] bg-white/20 w-0 animate-expand mx-auto md:mx-0"
+              className="mt-6 sm:mt-8 h-[1px] bg-white/20 w-0 animate-expand mx-auto"
               style={{ animation: "expand 2s ease-out forwards" }}
             ></div>
           </div>

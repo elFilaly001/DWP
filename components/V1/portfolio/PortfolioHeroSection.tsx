@@ -38,7 +38,7 @@ export const PortfolioHeroSection = () => {
 
             <button className="group relative bg-[#cbe425] text-black px-10 py-5 text-sm font-bold tracking-[0.2em] overflow-hidden transition-all duration-700 hover:px-12">
               <span className="relative z-10 flex items-center gap-3">
-                DÉCOUVRIR NOS SERVICES
+                DÉCOUVRIR NOS RÉALISATIONS
                 <ArrowRight
                   size={16}
                   className="transition-transform duration-700 group-hover:translate-x-2"
@@ -47,7 +47,7 @@ export const PortfolioHeroSection = () => {
               <span className="absolute inset-0 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></span>
               <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 text-[#cbe425] z-10">
                 <span className="flex items-center gap-3">
-                  DÉCOUVRIR NOS SERVICES
+                  DÉCOUVRIR NOS RÉALISATIONS
                   <ArrowRight size={16} />
                 </span>
               </span>

@@ -98,8 +98,8 @@ const Navbar = () => {
         </nav>
 
         {/* CTA Button with Golden Ratio expansion */}
-        <a
-          href="#contact"
+        <Link
+          href="/contact"
           className="hidden lg:block relative overflow-hidden bg-[#cbe425] text-black px-6 xl:px-8 py-2.5 xl:py-3 transition-all duration-700 group"
         >
           <span className={`relative z-10 text-lg xl:text-xl ${dancingScript.className}`}>Design with purpose</span>
@@ -108,7 +108,7 @@ const Navbar = () => {
           <span className={`absolute inset-0 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 text-[#cbe425] text-lg xl:text-xl ${dancingScript.className}`}>
             Design with purpose
           </span>
-        </a>
+        </Link>
 
         <button
           className="lg:hidden p-2 text-[#cbe425] z-10 transition-transform duration-500 hover:rotate-90"
@@ -142,8 +142,8 @@ const Navbar = () => {
             </Link>
           ))}
 
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             onClick={() => setIsMobileMenuOpen(false)}
             style={{
               animationDelay: "500ms",
@@ -151,7 +151,7 @@ const Navbar = () => {
             className={`mt-4 bg-[#cbe425] text-black px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg md:text-xl font-bold tracking-wider transition-all duration-500 hover:scale-105 animate-in fade-in slide-in-from-bottom-4 ${dancingScript.className}`}
           >
             Design with purpose
-          </a>
+          </Link>
         </div>
       )}
     </header>

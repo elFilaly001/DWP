@@ -75,11 +75,11 @@ export const ServicesGrid = ({ services }: ServicesGridProps) => {
           </div>
         </div>
 
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <p className="text-gray-400 text-xs tracking-wider uppercase">
             Disposition inspirée de la suite de Fibonacci • Φ ≈ 1.618
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );

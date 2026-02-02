@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+// import { ArrowRight } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -66,17 +66,12 @@ export const HeroSection = () => {
 
             <button className="group relative bg-[#cbe425] text-black px-6 sm:px-10 py-4 sm:py-5 text-xs sm:text-sm font-bold tracking-[0.15em] sm:tracking-[0.2em] overflow-hidden transition-all duration-700 hover:px-8 sm:hover:px-12 w-full sm:w-auto">
               <span className="relative z-10 flex items-center gap-3">
-                DÉCOUVRIR NOS SERVICES
-                <ArrowRight
-                  size={16}
-                  className="transition-transform duration-700 group-hover:translate-x-2"
-                />
+                DÉCOUVRIR NOS RÉALISATIONS
               </span>
               <span className="absolute inset-0 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></span>
               <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 text-[#cbe425] z-10">
                 <span className="flex items-center gap-3">
-                  DÉCOUVRIR NOS SERVICES
-                  <ArrowRight size={16} />
+                  DÉCOUVRIR NOS RÉALISATIONS
                 </span>
               </span>
             </button>
