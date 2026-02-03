@@ -29,6 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Preconnect and preload for LCP video */}
+        <link rel="preconnect" href="https://dwp-front.vercel.app" crossOrigin="anonymous" />
+        <link rel="preload" as="video" href="https://dwp-front.vercel.app/dwp-video.webm" type="video/mp4" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
