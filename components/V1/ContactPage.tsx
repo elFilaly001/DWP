@@ -144,7 +144,7 @@ export default function ContactPage() {
                   {
                     icon: MapPin,
                     title: "Adresse",
-                    content: "123 Avenue du Design\n75001 Paris, France",
+                    content: "N° 4 rue 2 Quartier Plaisance Vélodrome, Rue Ibn Hamdisse, Casablanca",
                   },
                   {
                     icon: Phone,

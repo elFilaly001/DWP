@@ -35,7 +35,7 @@ const Footer = () => {
         </nav>
         {/* Address and phone */}
         <div className="flex flex-col items-end gap-2 text-xs text-neutral-500">
-          <span>123 Rue de la Création, 75000 Paris, France</span>
+          <span>N° 4 rue 2 Quartier Plaisance Vélodrome, Rue Ibn Hamdisse, Casablanca</span>
           <span>Tél : <a href="tel:+33123456789" className="hover:text-[#cbe425] transition-colors duration-300">01 23 45 67 89</a></span>
         </div>
       </div>
