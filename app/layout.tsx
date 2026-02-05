@@ -6,6 +6,7 @@ import React from "react";
 import Nav1 from "@/components/V1/nav1";
 // import Nav1 from "@/components/V0/navbar";
 // import Navbar from "@/components/V0/navbar";
+import Footer from "@/components/V1/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
         {/* <Navbar /> */}
         <Nav1 />
         {children}
+        <Footer />
       </body>
     </html>
   );
