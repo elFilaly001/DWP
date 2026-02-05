@@ -16,7 +16,7 @@ const Footer = () => {
         {/* Brand logo and tagline */}
         <div className="flex flex-col items-start gap-3">
           <img src="/LOGO/DWP-logo.png" alt="DWP logo" className="h-10 w-auto mb-2" />
-          <span className="text-[#cbe425] text-base font-semibold tracking-wide">Design with purpose</span>
+          {/* <span className="text-[#cbe425] text-base font-semibold tracking-wide">Design with purpose</span> */}
         </div>
         {/* Navigation links */}
         <nav className="flex flex-col items-center gap-2 md:gap-3 text-sm font-medium">
