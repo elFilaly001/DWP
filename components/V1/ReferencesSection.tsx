@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useState } from "react";
 import { useInView } from "../../lib/useInView";
 
 interface Reference {
@@ -9,10 +10,10 @@ interface Reference {
 
 // Default placeholder references - replace with actual client logos
 const defaultReferences: Reference[] = [
-  { name: "Client 1", logo: "/LOGO/21212.png" },
-  { name: "Client 2", logo: "/LOGO/advAV.png" },
-  { name: "Client 3", logo: "/LOGO/DWP-logo-1.png" },
-  { name: "Client 4", logo: "/LOGO/DWP-logo.png" },
+  { name: "Client 1", logo: "/LOGO/globale.png" },
+  { name: "Client 2", logo: "/LOGO/preface.png" },
+  { name: "Client 3", logo: "/LOGO/cerame.png" },
+  { name: "Client 4", logo: "/LOGO/focusm.webp" },
   { name: "Client 5", logo: "/LOGO/UIR.jpg" },
   { name: "Client 6", logo: "/LOGO/pharma5.png" },
   { name: "Client 7", logo: "/LOGO/uim.jpg" },
@@ -21,11 +22,26 @@ const defaultReferences: Reference[] = [
   { name: "Client 10", logo: "/LOGO/1337.png" },
   { name: "Client 11", logo: "/LOGO/cmc.png" },
   { name: "Client 12", logo: "/LOGO/masen.png" },
-  { name: "Client 13", logo: "/LOGO/landor.jpg" },
+  { name: "Client 13", logo: "/LOGO/landor.png" },
   { name: "Client 14", logo: "/LOGO/ocp.png" },
   { name: "Client 15", logo: "/LOGO/pwc.png" },
   { name: "Client 16", logo: "/LOGO/deloite.png" },
   { name: "Client 17", logo: "/LOGO/nexia.PNG" },
+  { name: "Client 18", logo: "/LOGO/abs.png" },
+  { name: "Client 19", logo: "/LOGO/um6p.png" },
+  { name: "Client 20", logo: "/LOGO/excellence.png" },
+  { name: "Client 21", logo: "/LOGO/ofppt.png" },
+  { name: "Client 22", logo: "/LOGO/somfy.png" },
+  { name: "Client 23", logo: "/LOGO/total.png" },
+  { name: "Client 24", logo: "/LOGO/atalanta.png" },
+  { name: "Client 25", logo: "/LOGO/attijari.png" },
+  { name: "Client 26", logo: "/LOGO/aefe.png" },
+  { name: "Client 27", logo: "/LOGO/youcode.png" },
+  { name: "Client 28", logo: "/LOGO/ifs.png" },
+  { name: "Client 29", logo: "/LOGO/alphonse.webp" },
+  { name: "Client 30", logo: "/LOGO/clear.png" },
+  { name: "Client 31", logo: "/LOGO/bfi.webp" },
+  { name: "Client 32", logo: "/LOGO/airgo.png" },
 ];
 
 interface ReferencesSectionProps {
@@ -40,9 +56,52 @@ export const ReferencesSection = ({
   subtitle = "Des partenaires d'exception pour des projets remarquables",
 }: ReferencesSectionProps) => {
   const [ref, inView] = useInView({ threshold: 0.15 });
+  const [isHovering, setIsHovering] = useState(false);
 
-  // Duplicate references for seamless infinite scroll
-  const duplicatedReferences = [...references, ...references, ...references];
+  // Split references into 3 rows of 12 logos each
+  const row1References = references.slice(0, 12);
+  const row2References = references.slice(12, 24);
+  const row3References = references.slice(24, 36);
+
+  // Duplicate each row for seamless infinite scroll
+  const duplicatedRow1 = [...row1References, ...row1References, ...row1References];
+  const duplicatedRow2 = [...row2References, ...row2References, ...row2References];
+  const duplicatedRow3 = [...row3References, ...row3References, ...row3References];
+
+  const renderLogoRow = (logos: Reference[], direction: 'left' | 'right') => (
+    <div className="overflow-hidden">
+      <div 
+        className="flex w-max"
+        style={{
+          animation: direction === 'left' 
+            ? 'scroll-left 30s linear infinite' 
+            : 'scroll-right 30s linear infinite',
+          animationPlayState: isHovering ? 'paused' : 'running',
+          willChange: 'transform',
+          transform: 'translateZ(0)',
+          backfaceVisibility: 'hidden'
+        }}
+      >
+        {logos.map((reference, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 mx-4 sm:mx-6 md:mx-8 group"
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+          >
+            <div className="w-20 h-14 sm:w-28 sm:h-18 md:w-32 md:h-20 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg transition-all duration-300 group-hover:bg-white/10 group-hover:border-[#cbe425]/30 relative">
+              <Image
+                src={reference.logo}
+                alt={reference.name}
+                fill
+                className="object-contain p-2 sm:p-3 filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <section
@@ -78,7 +137,7 @@ export const ReferencesSection = ({
           </p>
         </div>
 
-        {/* Logo Carousel Container */}
+        {/* Logo Carousel Container - 3 Rows */}
         <div
           className={`relative transition-all duration-1000 delay-300 ${
             inView ? "opacity-100" : "opacity-0"
@@ -88,25 +147,19 @@ export const ReferencesSection = ({
           <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 md:w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 md:w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
 
-          {/* Scrolling Track */}
-          <div className="overflow-hidden">
-            <div className="flex w-max animate-scroll">
-              {duplicatedReferences.map((reference, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 mx-6 sm:mx-8 md:mx-12 group"
-                >
-                  <div className="w-24 h-16 sm:w-32 sm:h-20 md:w-40 md:h-24 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg transition-all duration-500 group-hover:bg-white/10 group-hover:border-[#cbe425]/30 group-hover:scale-105 relative">
-                    <Image
-                      src={reference.logo}
-                      alt={reference.name}
-                      fill
-                      className="object-contain p-3 sm:p-4 filter grayscale opacity-60 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
+          {/* Row 1 - Scrolls Left */}
+          <div className="mb-4 sm:mb-6">
+            {renderLogoRow(duplicatedRow1, "left")}
+          </div>
+
+          {/* Row 2 - Scrolls Right */}
+          <div className="mb-4 sm:mb-6">
+            {renderLogoRow(duplicatedRow2, "right")}
+          </div>
+
+          {/* Row 3 - Scrolls Left */}
+          <div>
+            {renderLogoRow(duplicatedRow3, "left")}
           </div>
         </div>
 
@@ -128,26 +181,6 @@ export const ReferencesSection = ({
           ))}
         </div>
       </div>
-
-      {/* CSS Animation */}
-      <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-33.333%);
-          }
-        }
-
-        .animate-scroll {
-          animation: scroll 40s linear infinite;
-        }
-
-        .animate-scroll:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 };

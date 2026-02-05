@@ -101,3 +101,22 @@ body {
 .animate-shimmer {
   animation: shimmer 2.5s ease-in-out infinite;
 }
+
+/* Logo carousel scroll animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-33.333%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
