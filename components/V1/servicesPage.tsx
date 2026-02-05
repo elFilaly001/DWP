@@ -5,6 +5,7 @@ import { ServicesGrid } from "./ServicesGrid";
 import { ProcessSection } from "./ProcessSection";
 import { TestimonialSection } from "./TestimonialSection";
 import { CTASection } from "./CTASection";
+import { ReferencesSection } from "./ReferencesSection";
 
 const ServicesPage = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -126,6 +127,7 @@ const ServicesPage = () => {
       <TestimonialSection />
       <ServicesGrid services={services} />
       <ProcessSection process={process} />
+      <ReferencesSection />
       <CTASection />
 
       <style jsx>{`

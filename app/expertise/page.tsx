@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "Afrique",
     "Casablanca",
     "Rabat",
-    "Chefchaouni Hamza",
+    "Chefchaouni Hamza",  
     "Hamza Chefchaouni",
     "Chefchaouni"
   ],

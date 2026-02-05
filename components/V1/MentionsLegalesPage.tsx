@@ -124,19 +124,19 @@ export default function MentionsLegalesPage() {
           <div className="space-y-6">
             <LegalSection
               icon={<Building2 className="w-6 h-6" />}
-              title="Éditeur du site"
+              title="Informations légales"
               index={0}
             >
-              <p><strong className="text-white">Raison sociale :</strong> DWP - Design With Purpose</p>
-              <p><strong className="text-white">Forme juridique :</strong> [À compléter]</p>
-              <p><strong className="text-white">Capital social :</strong> [À compléter]</p>
-              <p><strong className="text-white">Siège social :</strong> 123 Rue de la Création, 75000 Paris, France</p>
-              <p><strong className="text-white">SIRET :</strong> [À compléter]</p>
-              <p><strong className="text-white">RCS :</strong> [À compléter]</p>
-              <p><strong className="text-white">Numéro de TVA intracommunautaire :</strong> [À compléter]</p>
+              <p><strong className="text-white">Raison sociale :</strong> DWP - Société appartenant au Groupe Al Kalim</p>
+              {/* <p><strong className="text-white">Forme juridique :</strong> [À compléter]</p> */}
+              {/* <p><strong className="text-white">Capital social :</strong> [À compléter]</p> */}
+              <p><strong className="text-white">Siège social :</strong> N° 4 rue 2 Quartier Plaisance Vélodrome, Rue Ibn Hamdisse, Casablanca</p>
+              {/* <p><strong className="text-white">SIRET :</strong> [À compléter]</p> */}
+              {/* <p><strong className="text-white">RCS :</strong> [À compléter]</p> */}
+              {/* <p><strong className="text-white">Numéro de TVA intracommunautaire :</strong> [À compléter]</p> */}
             </LegalSection>
 
-            <LegalSection
+            {/* <LegalSection
               icon={<User className="w-6 h-6" />}
               title="Directeur de la publication"
               index={1}
@@ -145,9 +145,9 @@ export default function MentionsLegalesPage() {
               <p><strong className="text-white">Qualité :</strong> [À compléter]</p>
               <p><strong className="text-white">Email :</strong> contact@dwp-design.fr</p>
               <p><strong className="text-white">Téléphone :</strong> 01 23 45 67 89</p>
-            </LegalSection>
+            </LegalSection> */}
 
-            <LegalSection
+            {/* <LegalSection
               icon={<Server className="w-6 h-6" />}
               title="Hébergement"
               index={2}
@@ -155,58 +155,72 @@ export default function MentionsLegalesPage() {
               <p><strong className="text-white">Hébergeur :</strong> [Nom de l&apos;hébergeur]</p>
               <p><strong className="text-white">Adresse :</strong> [Adresse de l&apos;hébergeur]</p>
               <p><strong className="text-white">Téléphone :</strong> [Téléphone de l&apos;hébergeur]</p>
-            </LegalSection>
+            </LegalSection> */}
 
             <LegalSection
-              icon={<Scale className="w-6 h-6" />}
+              icon={<FileText className="w-6 h-6" />}
               title="Propriété intellectuelle"
               index={3}
             >
               <p>
-                L&apos;ensemble du contenu de ce site (textes, images, vidéos, graphismes, logo, icônes, etc.) 
-                est la propriété exclusive de DWP ou de ses partenaires. Toute reproduction, distribution, 
-                modification, adaptation, retransmission ou publication de ces éléments est strictement 
-                interdite sans l&apos;accord écrit préalable de DWP.
+                L’ensemble du contenu présent sur le site DWP (textes, images, vidéos, graphismes, logos, icônes, architecture du site, etc.) est la propriété exclusive de DWP ou fait l’objet d’une autorisation d’utilisation.
               </p>
               <p>
-                Les marques et logos figurant sur ce site sont des marques déposées par DWP ou ses 
-                partenaires. Toute reproduction totale ou partielle de ces marques ou logos, effectuée 
-                à partir des éléments du site sans l&apos;autorisation expresse de DWP, est prohibée.
+                Toute reproduction, représentation, modification, publication ou adaptation, totale ou partielle, de ces éléments, quel que soit le moyen ou le procédé utilisé, est interdite sans l’autorisation écrite préalable de DWP.
+              </p>
+            </LegalSection>
+
+<LegalSection
+              icon={<Shield className="w-6 h-6" />}
+              title="Responsabilité"
+              index={3}
+            >
+              <p>
+                DWP s’efforce de fournir sur le site des informations aussi précises que possible. Toutefois, elle ne pourra être tenue responsable des omissions, inexactitudes ou carences dans la mise à jour.
+              </p>
+              <p>
+                Le site peut contenir des liens vers d’autres sites. DWP ne peut être tenue responsable du contenu ou des pratiques de ces sites tiers.
+              </p>
+            </LegalSection>
+
+<LegalSection
+              icon={<User className="w-6 h-6" />}
+              title="Données personnelles"
+              index={3}
+            >
+              <p>
+                Les informations recueillies via les formulaires du site sont destinées exclusivement à DWP et sont utilisées dans le cadre de la relation commerciale et des demandes de contact.
+              </p>
+              <p>
+                Conformément à la Commission Nationale de Contrôle de la Protection des Données à Caractère Personnel (CNDP), vous disposez d’un droit d’accès, de rectification, de suppression et d’opposition concernant vos données personnelles.
+              </p>
+              <p>
+                Pour exercer ces droits, vous pouvez contacter :
+contact@dwp.ma 
+              </p>
+            </LegalSection>
+
+<LegalSection
+              icon={<Server className="w-6 h-6" />}
+              title="Cookies"
+              index={3}
+            >
+              <p>
+                Le site peut être amené à utiliser des cookies à des fins de mesure d’audience et d’amélioration de l’expérience utilisateur.
+L’utilisateur peut configurer son navigateur pour refuser tout ou partie des cookies.
               </p>
             </LegalSection>
 
             <LegalSection
               icon={<FileText className="w-6 h-6" />}
-              title="Conditions d&apos;utilisation"
+              title="Droit applicable"
               index={4}
             >
               <p>
-                L&apos;utilisation du site implique l&apos;acceptation pleine et entière des conditions générales 
-                d&apos;utilisation décrites ci-après. Ces conditions d&apos;utilisation sont susceptibles d&apos;être 
-                modifiées ou complétées à tout moment.
+                Le présent site et l’ensemble de son contenu sont soumis au droit marocain.
               </p>
               <p>
-                DWP se réserve le droit de modifier, à tout moment et sans préavis, le contenu du site 
-                ainsi que les présentes mentions légales. L&apos;utilisateur est donc invité à les consulter 
-                régulièrement.
-              </p>
-            </LegalSection>
-
-            <LegalSection
-              icon={<Shield className="w-6 h-6" />}
-              title="Limitation de responsabilité"
-              index={5}
-            >
-              <p>
-                DWP s&apos;efforce de fournir sur ce site des informations aussi précises que possible. 
-                Toutefois, DWP ne pourra être tenue responsable des omissions, des inexactitudes et 
-                des carences dans la mise à jour, qu&apos;elles soient de son fait ou du fait des tiers 
-                partenaires qui lui fournissent ces informations.
-              </p>
-              <p>
-                Les liens hypertextes mis en place dans le cadre du présent site internet en direction 
-                d&apos;autres ressources présentes sur le réseau Internet ne sauraient engager la 
-                responsabilité de DWP.
+                En cas de litige et à défaut de résolution amiable, les tribunaux compétents seront ceux du ressort du siège social de DWP, conformément aux dispositions légales en vigueur au Royaume du Maroc.
               </p>
             </LegalSection>
           </div>

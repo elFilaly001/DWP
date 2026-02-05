@@ -2,19 +2,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Cormorant, Allura } from "next/font/google";
-import { 
-  Shield, 
-  Database, 
-  Clock, 
-  Lock, 
-  UserCheck, 
-  Globe, 
-  Cookie, 
+import {
+  Shield,
+  Database,
+  Clock,
+  Lock,
+  UserCheck,
+  Globe,
+  Cookie,
   Mail,
   Eye,
   Trash2,
   Edit3,
-  Download
+  Download,
 } from "lucide-react";
 
 const allura = Allura({
@@ -35,7 +35,12 @@ interface PrivacySectionProps {
   index: number;
 }
 
-const PrivacySection = ({ icon, title, children, index }: PrivacySectionProps) => {
+const PrivacySection = ({
+  icon,
+  title,
+  children,
+  index,
+}: PrivacySectionProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -47,13 +52,15 @@ const PrivacySection = ({ icon, title, children, index }: PrivacySectionProps) =
       <div className="relative bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-2xl p-6 md:p-8 hover:border-[#cbe425]/30 transition-all duration-500">
         {/* Decorative gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#cbe425]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
-        
+
         <div className="relative z-10">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-12 h-12 rounded-xl bg-[#cbe425]/10 flex items-center justify-center text-[#cbe425] group-hover:bg-[#cbe425]/20 transition-colors duration-300">
               {icon}
             </div>
-            <h2 className={`text-xl md:text-2xl text-white ${cormorant.className}`}>
+            <h2
+              className={`text-xl md:text-2xl text-white ${cormorant.className}`}
+            >
               {title}
             </h2>
           </div>
@@ -145,7 +152,9 @@ export default function ConfidentialitePage() {
               transition={{ duration: 1, delay: 0.3 }}
             >
               Politique de{" "}
-              <span className={`text-[#cbe425] ${allura.className}`}>Confidentialité</span>
+              <span className={`text-[#cbe425] ${allura.className}`}>
+                Confidentialité
+              </span>
             </motion.h1>
 
             <motion.p
@@ -154,7 +163,8 @@ export default function ConfidentialitePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
             >
-              Nous accordons une grande importance à la protection de vos données personnelles et au respect de votre vie privée.
+              Nous accordons une grande importance à la protection de vos
+              données personnelles et au respect de votre vie privée.
             </motion.p>
           </motion.div>
         </div>
@@ -166,88 +176,197 @@ export default function ConfidentialitePage() {
           <div className="space-y-6">
             <PrivacySection
               icon={<Shield className="w-6 h-6" />}
-              title="Engagement de confidentialité"
+              title="Introduction"
               index={0}
             >
               <p>
-                DWP s&apos;engage à protéger la vie privée de ses utilisateurs et à traiter leurs données 
-                personnelles avec le plus grand soin, conformément au Règlement Général sur la Protection 
-                des Données (RGPD) et à la loi Informatique et Libertés.
+                La présente politique de confidentialité a pour objectif
+                d’informer les utilisateurs du site DWP de la manière dont leurs
+                données personnelles sont collectées, utilisées et protégées,
+                conformément à la loi marocaine n°09-08 relative à la protection
+                des données à caractère personnel
               </p>
               <p>
-                Cette politique de confidentialité décrit comment nous collectons, utilisons, stockons 
-                et protégeons vos informations personnelles lorsque vous utilisez notre site web.
-              </p>
-            </PrivacySection>
-
-            <PrivacySection
-              icon={<Database className="w-6 h-6" />}
-              title="Données collectées"
-              index={1}
-            >
-              <p className="font-medium text-white">Nous pouvons collecter les données suivantes :</p>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li><strong className="text-white">Données d&apos;identification :</strong> nom, prénom, adresse email, numéro de téléphone</li>
-                <li><strong className="text-white">Données de navigation :</strong> adresse IP, type de navigateur, pages visitées, durée de visite</li>
-                <li><strong className="text-white">Données de communication :</strong> messages envoyés via le formulaire de contact</li>
-                <li><strong className="text-white">Données de projet :</strong> informations relatives à vos projets de design d&apos;intérieur</li>
-              </ul>
-            </PrivacySection>
-
-            <PrivacySection
-              icon={<Globe className="w-6 h-6" />}
-              title="Finalités du traitement"
-              index={2}
-            >
-              <p className="font-medium text-white">Vos données sont collectées pour :</p>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Répondre à vos demandes de contact et de devis</li>
-                <li>Gérer notre relation commerciale</li>
-                <li>Améliorer nos services et l&apos;expérience utilisateur</li>
-                <li>Envoyer des communications marketing (avec votre consentement)</li>
-                <li>Respecter nos obligations légales et réglementaires</li>
-              </ul>
-            </PrivacySection>
-
-            <PrivacySection
-              icon={<Clock className="w-6 h-6" />}
-              title="Durée de conservation"
-              index={3}
-            >
-              <p>
-                Vos données personnelles sont conservées pendant une durée qui n&apos;excède pas la durée 
-                nécessaire aux finalités pour lesquelles elles sont collectées et traitées :
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4 mt-3">
-                <li><strong className="text-white">Données clients :</strong> 5 ans après la fin de la relation commerciale</li>
-                <li><strong className="text-white">Données de prospection :</strong> 3 ans après le dernier contact</li>
-                <li><strong className="text-white">Cookies de navigation :</strong> 13 mois maximum</li>
-              </ul>
-            </PrivacySection>
-
-            <PrivacySection
-              icon={<Lock className="w-6 h-6" />}
-              title="Sécurité des données"
-              index={4}
-            >
-              <p>
-                Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour 
-                protéger vos données personnelles contre tout accès non autorisé, modification, 
-                divulgation ou destruction.
-              </p>
-              <p>
-                Ces mesures incluent le chiffrement SSL, la limitation des accès, et des sauvegardes 
-                régulières de nos systèmes.
+                DWP s’engage à respecter la confidentialité, la sécurité et
+                l’intégrité des données personnelles de ses utilisateurs.
               </p>
             </PrivacySection>
 
             <PrivacySection
               icon={<UserCheck className="w-6 h-6" />}
-              title="Vos droits"
+              title="Responsable du traitement"
+              index={1}
+            >
+              <p>
+                Le responsable du traitement des données personnelles est :
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>
+                  <strong className="text-white">DWP</strong>
+                </li>
+                <li>
+                  <strong className="text-white">
+                    Société appartenant au Groupe Al Kalim
+                  </strong>
+                </li>
+                <li>
+                  <strong className="text-white">
+                    N° 4 rue 2 Quartier Plaisance Vélodrome, Rue Ibn Hamdisse,
+                    Casablanca
+                  </strong>
+                </li>
+                <li>
+                  <strong className="text-white">contact@dwp.ma</strong>
+                </li>
+              </ul>
+            </PrivacySection>
+
+            <PrivacySection
+              icon={<Mail className="w-6 h-6" />}
+              title="Données collectées"
+              index={1}
+            >
+              <p>
+                Dans le cadre de l’utilisation du site, DWP peut être amenée à
+                collecter les données suivantes :
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>
+                  <strong className="text-white">Nom et prénom</strong>
+                </li>
+                <li>
+                  <strong className="text-white">Adresse email</strong>
+                </li>
+                <li>
+                  <strong className="text-white">Numéro de téléphone</strong>
+                </li>
+                <li>
+                  <strong className="text-white">
+                    Nom de l’entreprise (le cas échéant)
+                  </strong>
+                </li>
+                <li>
+                  <strong className="text-white">
+                    Contenu des messages envoyés via les formulaires de contact
+                  </strong>
+                </li>
+                <li>
+                  <strong className="text-white">
+                    Données de navigation (cookies, adresse IP, type de
+                    navigateur – de manière anonymisée lorsque possible)
+                  </strong>
+                </li>
+              </ul>
+            </PrivacySection>
+
+            <PrivacySection
+              icon={<Edit3 className="w-6 h-6" />}
+              title="Finalités du traitement"
+              index={1}
+            >
+              <p>
+                Les données personnelles collectées sont utilisées pour :
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>
+                  <strong className="text-white">
+                    répondre aux demandes de contact et d’information
+                  </strong>
+                </li>
+                <li>
+                  <strong className="text-white">
+                    assurer le suivi commercial et relation client
+                  </strong>
+                </li>
+                <li>
+                  <strong className="text-white">
+                    améliorer l’expérience utilisateur du site
+                  </strong>
+                </li>
+                <li>
+                  <strong className="text-white">
+                    établir des statistiques internes de fréquentation
+                  </strong>
+                </li>
+                <li>
+                  <strong className="text-white">
+                    respecter les obligations légales et réglementaires en
+                    vigueur
+                  </strong>
+                </li>
+                <p>
+                  Les données ne sont en aucun cas utilisées à des fins non
+                  prévues ou cédées à des tiers non autorisés.
+                </p>
+              </ul>
+            </PrivacySection>
+
+            <PrivacySection
+              icon={<Lock className="w-6 h-6" />}
+              title="Base légale du traitement"
+              index={1}
+            >
+              <p>
+                Les traitements de données personnelles effectués par DWP
+                reposent sur :
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>
+                  <strong className="text-white">
+                    le consentement de l’utilisateur
+                  </strong>
+                </li>
+                <li>
+                  <strong className="text-white">
+                    l’exécution d’une demande formulée par l’utilisateur
+                  </strong>
+                </li>
+                <li>
+                  <strong className="text-white">
+                    le respect des obligations légales prévues par la loi
+                    marocaine n°09-08
+                  </strong>
+                </li>
+              </ul>
+            </PrivacySection>
+
+            <PrivacySection
+              icon={<Globe className="w-6 h-6" />}
+              title="Destinataires des données"
+              index={1}
+            >
+              <p>
+                Les données personnelles sont destinées exclusivement à DWP et,
+                le cas échéant, à ses prestataires techniques (hébergement,
+                maintenance), strictement dans le cadre de leurs missions.
+              </p>
+              <p>
+                DWP s’engage à ne pas vendre, louer ou céder les données
+                personnelles à des tiers sans consentement préalable.
+              </p>
+            </PrivacySection>
+
+            <PrivacySection
+              icon={<Shield className="w-6 h-6" />}
+              title="Sécurité des données"
+              index={1}
+            >
+              <p>
+                DWP met en œuvre toutes les mesures techniques et
+                organisationnelles appropriées afin de garantir la sécurité et
+                la confidentialité des données personnelles et d’empêcher tout
+                accès non autorisé, perte, altération ou divulgation.
+              </p>
+            </PrivacySection>
+
+            <PrivacySection
+              icon={<Eye className="w-6 h-6" />}
+              title="Droits des utilisateurs"
               index={5}
             >
               <p className="mb-4">
-                Conformément à la réglementation en vigueur, vous disposez des droits suivants concernant vos données personnelles :
+                Conformément à la loi marocaine n°09-08, l’utilisateur dispose
+                des droits suivants :
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <RightCard
@@ -275,47 +394,50 @@ export default function ConfidentialitePage() {
                   index={3}
                 />
               </div>
+                <p className="mb-4">
+                  L’utilisateur peut exercer ses droits en adressant une demande
+                  écrite à : contact@dwp.ma
+                </p>
+            </PrivacySection>
+
+            <PrivacySection
+              icon={<Database className="w-6 h-6" />}
+              title="Déclaration auprès de la CNDP"
+              index={2}
+            >
+              <p>
+                Les traitements de données personnelles effectués via le site
+                DWP font l’objet d’une déclaration ou autorisation auprès de la
+                Commission Nationale de Contrôle de la Protection des Données à
+                Caractère Personnel (CNDP), conformément à la législation
+                marocaine en vigueur.
+              </p>
             </PrivacySection>
 
             <PrivacySection
               icon={<Cookie className="w-6 h-6" />}
               title="Cookies"
-              index={6}
+              index={2}
             >
               <p>
-                Notre site utilise des cookies pour améliorer votre expérience de navigation. Les cookies 
-                sont de petits fichiers texte stockés sur votre appareil qui nous permettent de vous 
-                reconnaître et de mémoriser vos préférences.
+                Le site peut utiliser des cookies afin d’améliorer la navigation
+                et d’établir des statistiques de fréquentation.
               </p>
-              <p className="font-medium text-white mt-3">Types de cookies utilisés :</p>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li><strong className="text-white">Cookies essentiels :</strong> nécessaires au fonctionnement du site</li>
-                <li><strong className="text-white">Cookies analytiques :</strong> pour comprendre comment vous utilisez notre site</li>
-                <li><strong className="text-white">Cookies de personnalisation :</strong> pour mémoriser vos préférences</li>
-              </ul>
-              <p className="mt-3">
-                Vous pouvez gérer vos préférences de cookies à tout moment via les paramètres de votre navigateur.
+              <p>
+                L’utilisateur peut à tout moment configurer son navigateur pour
+                accepter ou refuser les cookies.
               </p>
             </PrivacySection>
 
             <PrivacySection
-              icon={<Mail className="w-6 h-6" />}
-              title="Contact"
-              index={7}
+              icon={<Globe className="w-6 h-6" />}
+              title="Droit applicable"
+              index={3}
             >
               <p>
-                Pour toute question relative à cette politique de confidentialité ou pour exercer vos 
-                droits, vous pouvez nous contacter :
-              </p>
-              <div className="mt-4 p-4 bg-neutral-800/50 rounded-xl border border-neutral-700">
-                <p><strong className="text-white">Email :</strong> contact@dwp-design.fr</p>
-                <p><strong className="text-white">Adresse :</strong> 123 Rue de la Création, 75000 Paris, France</p>
-                <p><strong className="text-white">Téléphone :</strong> 01 23 45 67 89</p>
-              </div>
-              <p className="mt-4">
-                Vous disposez également du droit d&apos;introduire une réclamation auprès de la CNIL 
-                (Commission Nationale de l&apos;Informatique et des Libertés) si vous estimez que le 
-                traitement de vos données n&apos;est pas conforme à la réglementation.
+                La présente politique de confidentialité est régie par le droit
+                marocain. En cas de litige, les tribunaux compétents seront ceux
+                du ressort du siège social de DWP.
               </p>
             </PrivacySection>
           </div>
@@ -329,7 +451,12 @@ export default function ConfidentialitePage() {
             className="mt-12 pt-8 border-t border-neutral-800 text-center"
           >
             <p className="text-neutral-500 text-sm">
-              Dernière mise à jour : {new Date().toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
+              Dernière mise à jour :{" "}
+              {new Date().toLocaleDateString("fr-FR", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
             </p>
           </motion.div>
         </div>

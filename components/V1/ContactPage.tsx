@@ -149,12 +149,12 @@ export default function ContactPage() {
                   {
                     icon: Phone,
                     title: "Téléphone",
-                    content: "+33 1 23 45 67 89",
+                    content: "05 22 36 03 14",
                   },
                   {
                     icon: Mail,
                     title: "Email",
-                    content: "contact@designwithpurpose.fr",
+                    content: "contact@dwp.ma",
                   },
                 ].map((item, index) => (
                   <motion.div

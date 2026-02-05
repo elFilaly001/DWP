@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 import type { RefObject } from "react";
 
-export function useInView<T extends HTMLElement = HTMLElement>(options = {}): [RefObject<T>, boolean] {
+export function useInView<T extends HTMLElement = HTMLElement>(options = {}): [RefObject<T | null>, boolean] {
   const ref = useRef<T>(null);
   const [inView, setInView] = useState(false);
 
