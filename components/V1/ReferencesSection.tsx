@@ -32,16 +32,6 @@ const defaultReferences: Reference[] = [
   { name: "Client 20", logo: "/LOGO/20.png" },
   { name: "Client 21", logo: "/LOGO/21.png" },
   { name: "Client 22", logo: "/LOGO/22.png" },
-  { name: "Client 23", logo: "/LOGO/total.png" },
-  { name: "Client 24", logo: "/LOGO/atalanta.png" },
-  { name: "Client 25", logo: "/LOGO/attijari.png" },
-  { name: "Client 26", logo: "/LOGO/aefe.png" },
-  { name: "Client 27", logo: "/LOGO/youcode.png" },
-  { name: "Client 28", logo: "/LOGO/ifs.png" },
-  { name: "Client 29", logo: "/LOGO/alphonse.webp" },
-  { name: "Client 30", logo: "/LOGO/clear.png" },
-  { name: "Client 31", logo: "/LOGO/bfi.webp" },
-  { name: "Client 32", logo: "/LOGO/airgo.png" },
 ];
 
 interface ReferencesSectionProps {
@@ -59,14 +49,10 @@ export const ReferencesSection = ({
   const [isHovering, setIsHovering] = useState(false);
 
   // Split references into 3 rows of 12 logos each
-  const row1References = references.slice(0, 12);
-  const row2References = references.slice(12, 24);
-  const row3References = references.slice(24, 36);
-
-  // Duplicate each row for seamless infinite scroll
-  const duplicatedRow1 = [...row1References, ...row1References, ...row1References];
-  const duplicatedRow2 = [...row2References, ...row2References, ...row2References];
-  const duplicatedRow3 = [...row3References, ...row3References, ...row3References];
+    // Only one row: first 12 references
+    const rowReferences = references.slice(0, 12);
+    // Duplicate for seamless infinite scroll
+    const duplicatedRow = [...rowReferences, ...rowReferences, ...rowReferences];
 
   const renderLogoRow = (logos: Reference[], direction: 'left' | 'right') => (
     <div className="overflow-hidden">
@@ -89,7 +75,7 @@ export const ReferencesSection = ({
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
-            <div className="w-20 h-14 sm:w-28 sm:h-18 md:w-32 md:h-20 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg transition-all duration-300 group-hover:bg-white/10 group-hover:border-[#cbe425]/30 relative">
+            <div className="w-28 h-20 sm:w-36 sm:h-28 md:w-44 md:h-32 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg transition-all duration-300 group-hover:bg-white/10 group-hover:border-[#cbe425]/30 relative">
               <Image
                 src={reference.logo}
                 alt={reference.name}
@@ -137,7 +123,7 @@ export const ReferencesSection = ({
           </p>
         </div>
 
-        {/* Logo Carousel Container - 3 Rows */}
+        {/* Logo Carousel Container - Single Row */}
         <div
           className={`relative transition-all duration-1000 delay-300 ${
             inView ? "opacity-100" : "opacity-0"
@@ -147,19 +133,9 @@ export const ReferencesSection = ({
           <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 md:w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 md:w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
 
-          {/* Row 1 - Scrolls Left */}
+          {/* Single Row - Scrolls Left */}
           <div className="mb-4 sm:mb-6">
-            {renderLogoRow(duplicatedRow1, "left")}
-          </div>
-
-          {/* Row 2 - Scrolls Right */}
-          <div className="mb-4 sm:mb-6">
-            {renderLogoRow(duplicatedRow2, "right")}
-          </div>
-
-          {/* Row 3 - Scrolls Left */}
-          <div>
-            {renderLogoRow(duplicatedRow3, "left")}
+            {renderLogoRow(duplicatedRow, "left")}
           </div>
         </div>
 
