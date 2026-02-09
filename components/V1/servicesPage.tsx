@@ -24,28 +24,28 @@ const ServicesPage = () => {
 
   const services = [
     {
-      title: "Rénovation de cuisine",
+      title: "Espaces de Travail Performants",
       description:
-        "Transformez votre cuisine en un paradis culinaire avec des appareils modernes, des rangements sur mesure et des finitions élégantes qui inspirent la créativité.",
+        "Aménagement d’espaces universitaires et pédagogiques Nous accompagnons les institutions dans la création d’environnements d’apprentissage inspirants et fonctionnels. Nos solutions intègrent les nouveaux usages pédagogiques, la modularité des espaces et le confort des étudiants et enseignants.L’architecture intérieure devient ici un levier de transmission du savoir, favorisant concentration, échange et innovation.",
       featured: true,
       size: "large",
     },
     {
-      title: "Conception de bureau",
+      title: "Solution Campus & Espaces de Savoir",
       description:
-        "Créez des espaces de travail inspirants qui stimulent la productivité et reflètent la culture de votre entreprise.",
+        "Aménagement d’espaces universitaires et pédagogiques Nous accompagnons les institutions dans la création d’environnements d’apprentissage inspirants et fonctionnels. Nos solutions intègrent les nouveaux usages pédagogiques, la modularité des espaces et le confort des étudiants et enseignants. L’architecture intérieure devient ici un levier de transmission du savoir, favorisant concentration, échange et innovation.",
       size: "medium",
     },
     {
-      title: "Rénovation complète",
+      title: "Solution Expérience Hôtelière & Accueil",
       description:
-        "Des transformations totales qui réinventent votre espace de vie, du sol au plafond, avec un design cohérent.",
+        "Aménagement hôtelier et espaces d’hospitalité Nous concevons des espaces qui racontent une expérience, bien au-delà de l’esthétique. Chaque projet hôtelier est pensé pour créer une immersion émotionnelle, renforcer l’identité du lieu et optimiser l’expérience client, du premier regard jusqu’au dernier souvenir. Design, matériaux, lumière et circulation sont orchestrés pour allier élégance, confort et rentabilité.",
       size: "medium",
     },
     {
-      title: "Couloirs & Hallways",
+      title: "Solution Signalétique & Orientation Intelligente",
       description:
-        "Optimisez vos espaces de transition avec des solutions de rangement astucieuses et des éléments de design.",
+        "Étude et conception de signalétique architecturale Nous développons des solutions de signalétique qui structurent l’espace, guident les usagers et valorisent l’architecture. Notre approche va au-delà du panneau : elle intègre lisibilité, hiérarchisation de l’information, cohérence graphique et intégration architecturale. La signalétique devient un outil de fluidité, de sécurité et d’identité, au service de l’expérience utilisateur.",
       size: "small",
     },
     {
@@ -65,58 +65,58 @@ const ServicesPage = () => {
   const process = [
     {
       number: "01",
-      title: "Rencontre",
+      title: "Écoute & Cadrage du Projet",
       description:
-        "Tout projet débute par une rencontre. Un temps d’échange essentiel pour comprendre votre vision, vos usages, vos contraintes et vos ambitions, et poser les bases d’une collaboration claire et sereine.",
+        "Analyse approfondie des besoins, des usages et des objectifs du client. Définition du périmètre, des attentes, des délais et des contraintes du projet.",
       fibonacci: 1,
     },
     {
       number: "02",
-      title: "Intention",
+      title: "Diagnostic & Analyse de l’Existant",
       description:
-        "Nous analysons le lieu, son contexte et son potentiel. Cette phase permet de définir une intention forte, en alignant identité, fonctionnalité et sens, afin de donner une direction claire au projet.",
+        "Étude du site, des surfaces, des flux et des contraintes techniques. Identification des opportunités d’optimisation et des leviers de transformation.",
       fibonacci: 1,
     },
     {
       number: "03",
-      title: "Narration",
+      title: "Concept Architectural & Spatial",
       description:
-        "Nous traduisons l’intention en concept. Ambiances, lignes directrices et partis pris esthétiques prennent forme pour construire une narration cohérente et élégante autour de l’espace.",
+        "Élaboration d’un concept fort, traduisant la vision du projet. Organisation des volumes, des usages et des ambiances, en cohérence avec l’identité du lieu et des usagers.",
       fibonacci: 2,
     },
     {
       number: "04",
-      title: "Définition des espaces",
+      title: "Design Détaillé & Visualisation",
       description:
-        "Le concept est ensuite structuré et rationalisé. Organisation des volumes, parcours, matériaux et premières orientations techniques sont définis pour assurer l’équilibre entre design, usage et faisabilité.",
+        "Définition des matériaux, du mobilier, des détails et production de rendus 3D. Cette étape permet une projection claire et une validation avant exécution.",
       fibonacci: 3,
     },
     {
       number: "05",
-      title: "Coordination ",
+      title: "Études Techniques & Coordination",
       description:
-        "Nous accompagnons le projet dans sa phase de réalisation. La coordination des intervenants, le suivi des choix et le contrôle de la qualité garantissent le respect de la vision initiale à chaque étape.",
+        "Développement des études techniques (CVC, électricité, éclairage, acoustique, signalétique). Coordination des intervenants pour assurer cohérence, conformité et performance.",
       fibonacci: 5,
     },
     {
       number: "06",
-      title: "Finitions",
+      title: "Budgétisation & Estimation des Coûts",
       description:
-        "Chaque détail compte. Nous affinons, ajustons et veillons à la cohérence globale du projet, afin d’atteindre un niveau de finition à la hauteur des exigences définies.",
+        "Évaluation financière du projet à partir du concept défini. Estimation des coûts par poste, arbitrages techniques et ajustements pour garantir la cohérence entre ambition, budget et faisabilité.",
       fibonacci: 8,
     },
     {
       number: "07",
-      title: "Détails ",
+      title: "Pilotage & Suivi de Réalisation",
       description:
-        "Les détails viennent parfaire le projet. Finitions, matériaux et éléments sur mesure sont ajustés avec précision pour garantir une cohérence globale.",
+        "Organisation, coordination et suivi des travaux. Contrôle des délais, des coûts et de la qualité d’exécution.",
       fibonacci: 13,
     },
     {
       number: "08",
-      title: "Révélation",
+      title: "Livraison & Accompagnement Final",
       description:
-        "Le projet est livré dans sa forme aboutie. Un espace prêt à être vécu, fidèle à l’intention initiale et révélant pleinement l’identité du lieu.",
+        "Réception des ouvrages, ajustements et accompagnement à la prise en main des espaces. L’objectif : livrer un projet maîtrisé, conforme et durable.",
       fibonacci: 13,
     },
   ];
