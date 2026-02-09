@@ -28,11 +28,11 @@ export const PortfolioHeroSection = () => {
             </div>
 
             <h1 className="text-white text-[clamp(50px,8vw,96px)] font-serif leading-[0.95] mb-8 group">
-              Rénover votre espace
+              Chaque création raconte une expérience.
             </h1>
 
             <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed mb-12 max-w-xl">
-              Chaque création raconte une expérience.
+              Chaque projet suit les principes du nombre d’or. Design mathématiquement parfait, résultats naturellement harmonieux.
             </p>
 
             <button className="group relative bg-[#cbe425] text-black px-10 py-5 text-sm font-bold tracking-[0.2em] overflow-hidden transition-all duration-700 hover:px-12">
