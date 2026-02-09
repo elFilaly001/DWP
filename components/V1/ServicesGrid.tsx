@@ -59,8 +59,8 @@ export const ServicesGrid = ({ services }: ServicesGridProps) => {
                 <ServiceCard
                   service={services[1]}
                   index={1}
-                  hasPlaceholder
-                  imageUrl="https://cdn.prod.website-files.com/5d4c9442574a782d86d480d5/5e5edeec5db29a8bd293684d_TMA-Wilton-Brands-cafe1_edc25c1405df16b8ec979ccd6ea97d0d_1000.webp"
+                  // hasPlaceholder
+                  // imageUrl="https://cdn.prod.website-files.com/5d4c9442574a782d86d480d5/5e5edeec5db29a8bd293684d_TMA-Wilton-Brands-cafe1_edc25c1405df16b8ec979ccd6ea97d0d_1000.webp"
                 />
               </div>
             </div>

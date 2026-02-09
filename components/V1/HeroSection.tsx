@@ -56,7 +56,7 @@ export const HeroSection = () => {
             </div>
 
             <h1 className="text-white text-[clamp(36px,10vw,96px)] font-serif leading-[0.95] mb-6 sm:mb-8 group">
-              Là où le cœur de la technique parle à l’âme de du concept.
+              Là où le cœur de la technique parle à l’âme du concept.
             </h1>
 
             <p className="text-white/70 text-base sm:text-lg md:text-xl font-light leading-relaxed mb-8 sm:mb-12 max-w-xl">
