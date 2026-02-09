@@ -48,46 +48,49 @@ export const ReferencesSection = ({
   const [ref, inView] = useInView({ threshold: 0.15 });
   const [isHovering, setIsHovering] = useState(false);
 
-  // Split references into 3 rows of 12 logos each
-    // Only one row: first 12 references
-    const rowReferences = references.slice(0, 12);
-    // Duplicate for seamless infinite scroll
-    const duplicatedRow = [...rowReferences, ...rowReferences, ...rowReferences];
+  // Show all references
+  // Ensure all references are shown
+  const rowReferences = references || [];
 
-  const renderLogoRow = (logos: Reference[], direction: 'left' | 'right') => (
-    <div className="overflow-hidden">
-      <div 
-        className="flex w-max"
-        style={{
-          animation: direction === 'left' 
-            ? 'scroll-left 30s linear infinite' 
-            : 'scroll-right 30s linear infinite',
-          animationPlayState: isHovering ? 'paused' : 'running',
-          willChange: 'transform',
-          transform: 'translateZ(0)',
-          backfaceVisibility: 'hidden'
-        }}
-      >
-        {logos.map((reference, index) => (
-          <div
-            key={index}
-            className="flex-shrink-0 mx-4 sm:mx-6 md:mx-8 group"
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
-          >
-            <div className="w-28 h-20 sm:w-36 sm:h-28 md:w-44 md:h-32 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg transition-all duration-300 group-hover:bg-white/10 group-hover:border-[#cbe425]/30 relative">
-              <Image
-                src={reference.logo}
-                alt={reference.name}
-                fill
-                className="object-contain p-2 sm:p-3 filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
-              />
+  const renderLogoRow = (logos: Reference[], direction: 'left' | 'right') => {
+    // Duplicate logos 3 times for seamless infinite scroll (animation uses -33.333%)
+    const duplicatedLogos = [...logos, ...logos, ...logos];
+    
+    return (
+      <div className="overflow-hidden">
+        <div 
+          className="flex w-max"
+          style={{
+            animation: direction === 'left' 
+              ? 'scroll-left 30s linear infinite' 
+              : 'scroll-right 30s linear infinite',
+            animationPlayState: isHovering ? 'paused' : 'running',
+            willChange: 'transform',
+            transform: 'translateZ(0)',
+            backfaceVisibility: 'hidden'
+          }}
+        >
+          {duplicatedLogos.map((reference, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 mx-4 sm:mx-6 md:mx-8 group"
+              onMouseEnter={() => setIsHovering(true)}
+              onMouseLeave={() => setIsHovering(false)}
+            >
+              <div className="w-28 h-20 sm:w-36 sm:h-28 md:w-44 md:h-32 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg transition-all duration-300 group-hover:bg-white/10 group-hover:border-[#cbe425]/30 relative">
+                <Image
+                  src={reference.logo}
+                  alt={reference.name}
+                  fill
+                  className="object-contain p-2 sm:p-3 filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <section
@@ -135,7 +138,7 @@ export const ReferencesSection = ({
 
           {/* Single Row - Scrolls Left */}
           <div className="mb-4 sm:mb-6">
-            {renderLogoRow(duplicatedRow, "left")}
+            {renderLogoRow(rowReferences, "left")}
           </div>
         </div>
 
