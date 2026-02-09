@@ -11,7 +11,7 @@ interface Reference {
 // Default placeholder references - replace with actual client logos
 const defaultReferences: Reference[] = [
   { name: "Client 1", logo: "/LOGO/1.png" },
-  { name: "Client 2", logo: "/LOGO/2.png" },
+  { name: "Client 2", logo: "/LOGO/2.webp" },
   { name: "Client 3", logo: "/LOGO/3.png" },
   { name: "Client 4", logo: "/LOGO/4.png" },
   { name: "Client 5", logo: "/LOGO/5.png" },
@@ -21,7 +21,7 @@ const defaultReferences: Reference[] = [
   { name: "Client 9", logo: "/LOGO/9.png" },
   { name: "Client 10", logo: "/LOGO/10.png" },
   { name: "Client 11", logo: "/LOGO/11.png" },
-  { name: "Client 12", logo: "/LOGO/12.png" },
+  { name: "Client 12", logo: "/LOGO/12.webp" },
   { name: "Client 13", logo: "/LOGO/13.png" },
   { name: "Client 14", logo: "/LOGO/14.png" },
   { name: "Client 15", logo: "/LOGO/15.png" },
