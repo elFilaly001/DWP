@@ -26,38 +26,26 @@ const ServicesPage = () => {
     {
       title: "Espaces de Travail Performants",
       description:
-        "Aménagement d’espaces universitaires et pédagogiques Nous accompagnons les institutions dans la création d’environnements d’apprentissage inspirants et fonctionnels. Nos solutions intègrent les nouveaux usages pédagogiques, la modularité des espaces et le confort des étudiants et enseignants.L’architecture intérieure devient ici un levier de transmission du savoir, favorisant concentration, échange et innovation.",
+        "Nous aménageons des salles de cours, bibliothèques et espaces collaboratifs adaptés aux nouveaux usages pédagogiques. Nos solutions privilégient la modularité, le confort et l’acoustique afin d’améliorer la concentration, l’interaction et le bien-être des étudiants comme des enseignants.",
       featured: true,
       size: "large",
     },
     {
-      title: "Solution Campus & Espaces de Savoir",
+      title: "Campus & Espaces de savoir",
       description:
-        "Aménagement d’espaces universitaires et pédagogiques Nous accompagnons les institutions dans la création d’environnements d’apprentissage inspirants et fonctionnels. Nos solutions intègrent les nouveaux usages pédagogiques, la modularité des espaces et le confort des étudiants et enseignants. L’architecture intérieure devient ici un levier de transmission du savoir, favorisant concentration, échange et innovation.",
+        "Nous accompagnons les établissements d’enseignement dans la conception et l’aménagement d’espaces pédagogiques modernes : salles de cours, bibliothèques et zones collaboratives.Chaque projet intègre les nouveaux usages, la modularité des espaces et le confort des étudiants comme des enseignants afin de favoriser concentration, échanges et apprentissage.",
       size: "medium",
     },
     {
-      title: "Solution Expérience Hôtelière & Accueil",
+      title: "Expérience hôtelière & accueil",
       description:
-        "Aménagement hôtelier et espaces d’hospitalité Nous concevons des espaces qui racontent une expérience, bien au-delà de l’esthétique. Chaque projet hôtelier est pensé pour créer une immersion émotionnelle, renforcer l’identité du lieu et optimiser l’expérience client, du premier regard jusqu’au dernier souvenir. Design, matériaux, lumière et circulation sont orchestrés pour allier élégance, confort et rentabilité.",
+        "Nous concevons et aménageons des hôtels, résidences et espaces d’accueil pensés pour créer une véritable immersion émotionnelle pour le visiteur.Chaque projet valorise l’identité du lieu grâce au design, aux matériaux, à la lumière et à la circulation, tout en garantissant confort, fonctionnalité et efficacité d’exploitation.",
       size: "medium",
     },
     {
-      title: "Solution Signalétique & Orientation Intelligente",
+      title: "Signalétique & orientation intelligente",
       description:
-        "Étude et conception de signalétique architecturale Nous développons des solutions de signalétique qui structurent l’espace, guident les usagers et valorisent l’architecture. Notre approche va au-delà du panneau : elle intègre lisibilité, hiérarchisation de l’information, cohérence graphique et intégration architecturale. La signalétique devient un outil de fluidité, de sécurité et d’identité, au service de l’expérience utilisateur.",
-      size: "small",
-    },
-    {
-      title: "Espaces commerciaux",
-      description:
-        "Concevez des environnements commerciaux qui améliorent l'expérience client et favorisent la réussite.",
-      size: "small",
-    },
-    {
-      title: "Design extérieur",
-      description:
-        "Sublimez l'attrait de votre propriété avec des rénovations extérieures remarquables.",
+        "Nous concevons des systèmes de signalétique architecturale qui structurent les espaces et facilitent l’orientation des usagers.Au-delà du simple panneau, notre approche intègre lisibilité, hiérarchisation de l’information, cohérence graphique et intégration au bâtiment afin d’améliorer la fluidité des déplacements, la sécurité et l’expérience utilisateur.",
       size: "small",
     },
   ];

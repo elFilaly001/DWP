@@ -39,40 +39,19 @@ export const ServicesGrid = ({ services }: ServicesGridProps) => {
           </p>
         </div>
 
-        {/* outer grid: left big area + right column - responsive layout */}
-        <div className="flex flex-col lg:flex-row gap-3">
-          <div className="relative bg-black w-full lg:w-[60%] aspect-square sm:aspect-[4/3] lg:aspect-square">
-            <div className="absolute bg-[#cbe425] -left-2 top-1/2 w-[60%] sm:w-[70%] h-20 sm:h-32 md:h-50 hidden sm:block"></div>
-            <div className="h-full">
-              <ServiceCard
-                service={services[0]}
-                index={0}
-                hasPlaceholder
-                imageUrl="https://theplantsproject.com.au/cdn/shop/articles/office_idea_1024x1024.png?v=1742711986"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col gap-3 bg-white w-full lg:w-[40%]">
-            <div className="relative bg-black flex-[2] min-h-[200px] sm:min-h-[250px] md:min-h-[300px]">
-              <div className="absolute bg-[#cbe425] -right-2 top-2 w-[70%] sm:w-[80%] h-8 sm:h-10 md:h-12 pointer-events-none hidden sm:block"></div>
-              <div className="h-full">
-                <ServiceCard
-                  service={services[1]}
-                  index={1}
-                  // hasPlaceholder
-                  // imageUrl="https://cdn.prod.website-files.com/5d4c9442574a782d86d480d5/5e5edeec5db29a8bd293684d_TMA-Wilton-Brands-cafe1_edc25c1405df16b8ec979ccd6ea97d0d_1000.webp"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3 bg-white flex-[1] items-stretch">
-              <div className="flex-1 relative overflow-hidden">
-                <ServiceCard service={services[2]} index={2} />
-              </div>
-              <div className="flex-1 relative overflow-hidden">
-                <ServiceCard service={services[3]} index={3} />
-              </div>
-            </div>
-          </div>
+        {/* One-column layout for all service cards */}
+        <div className="flex flex-col gap-6">
+          {services.map((service, idx) => (
+            <ServiceCard
+              key={idx}
+              service={service}
+              index={idx}
+              {...(idx === 0 && {
+                hasPlaceholder: true,
+                imageUrl: "https://theplantsproject.com.au/cdn/shop/articles/office_idea_1024x1024.png?v=1742711986",
+              })}
+            />
+          ))}
         </div>
 
         {/* <div className="mt-12 text-center">
