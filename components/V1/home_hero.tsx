@@ -125,7 +125,7 @@ export default function HeroFibo() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.3 }}
           >
-            L'art royal{" "}
+            L'art royal,{" "}
             <span
               className={`text-[#cbe425] text-[clamp(38px,5.2vw,75px)] tracking-[0.03em] -translate-y-[2px] inline-block ${allura.className}`}
             >
