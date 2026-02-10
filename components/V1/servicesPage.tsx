@@ -55,28 +55,28 @@ const ServicesPage = () => {
       number: "01",
       title: "Écoute & Cadrage du Projet",
       description:
-        "Analyse approfondie des besoins, des usages et des objectifs du client. Définition du périmètre, des attentes, des délais et des contraintes du projet.",
+        "Analyse des besoins, des usages et des objectifs du client. Définition du périmètre, des attentes, des délais et des contraintes du projet.",
       fibonacci: 1,
     },
     {
       number: "02",
       title: "Diagnostic & Analyse de l’Existant",
       description:
-        "Étude du site, des surfaces, des flux et des contraintes techniques. Identification des opportunités d’optimisation et des leviers de transformation.",
+        "Étude du site, des surfaces, des flux et des contraintes techniques afin d’identifier les opportunités d’optimisation et de transformation.",
       fibonacci: 1,
     },
     {
       number: "03",
       title: "Concept Architectural & Spatial",
       description:
-        "Élaboration d’un concept fort, traduisant la vision du projet. Organisation des volumes, des usages et des ambiances, en cohérence avec l’identité du lieu et des usagers.",
+        "Élaboration d’un concept traduisant la vision du projet. Organisation des volumes, des usages et des ambiances en cohérence avec l’identité du lieu et de ses utilisateurs.",
       fibonacci: 2,
     },
     {
       number: "04",
       title: "Design Détaillé & Visualisation",
       description:
-        "Définition des matériaux, du mobilier, des détails et production de rendus 3D. Cette étape permet une projection claire et une validation avant exécution.",
+        "Définition des matériaux, du mobilier et des détails, avec production de plans et rendus 3D permettant une projection claire et une validation avant exécution.",
       fibonacci: 3,
     },
     {
@@ -90,7 +90,7 @@ const ServicesPage = () => {
       number: "06",
       title: "Budgétisation & Estimation des Coûts",
       description:
-        "Évaluation financière du projet à partir du concept défini. Estimation des coûts par poste, arbitrages techniques et ajustements pour garantir la cohérence entre ambition, budget et faisabilité.",
+        "Évaluation financière du projet et arbitrages techniques afin d’assurer l’équilibre entre ambition, budget et faisabilité.",
       fibonacci: 8,
     },
     {
@@ -104,7 +104,7 @@ const ServicesPage = () => {
       number: "08",
       title: "Livraison & Accompagnement Final",
       description:
-        "Réception des ouvrages, ajustements et accompagnement à la prise en main des espaces. L’objectif : livrer un projet maîtrisé, conforme et durable.",
+        "Réception des ouvrages, ajustements et accompagnement à la prise en main des espaces pour garantir un projet conforme et durable.",
       fibonacci: 13,
     },
   ];
