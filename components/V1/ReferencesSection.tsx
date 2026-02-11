@@ -32,6 +32,19 @@ const defaultReferences: Reference[] = [
   { name: "Client 20", logo: "/LOGO/20.png" },
   { name: "Client 21", logo: "/LOGO/21.png" },
   { name: "Client 22", logo: "/LOGO/22.png" },
+  { name: "Client 23", logo: "/LOGO/23.webp" },
+  { name: "Client 24", logo: "/LOGO/24.png" },
+  { name: "Client 25", logo: "/LOGO/25.png" },
+  { name: "Client 26", logo: "/LOGO/26.png" },
+  { name: "Client 27", logo: "/LOGO/27.png" },
+  { name: "Client 28", logo: "/LOGO/28.png" },
+  { name: "Client 29", logo: "/LOGO/29.png" },
+  { name: "Client 30", logo: "/LOGO/30.png" },
+  { name: "Client 31", logo: "/LOGO/31.png" },
+  { name: "Client 32", logo: "/LOGO/32.png" },
+  { name: "Client 33", logo: "/LOGO/33.png" },
+  { name: "Client 34", logo: "/LOGO/34.png" },
+  { name: "Client 35", logo: "/LOGO/35.png" },
 ];
 
 interface ReferencesSectionProps {
