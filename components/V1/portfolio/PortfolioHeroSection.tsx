@@ -27,7 +27,7 @@ export const PortfolioHeroSection = () => {
               Notre expertise
             </div>
 
-            <h1 className="text-white text-[clamp(50px,8vw,96px)] font-serif leading-[0.95] mb-8 group">
+            <h1 className="text-white text-[clamp(20px,8vw,72px)] font-serif leading-[0.95] mb-8 group">
               Chaque création raconte une expérience.
             </h1>
 
