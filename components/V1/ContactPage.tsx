@@ -297,7 +297,7 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full px-4 py-3 bg-white border border-gray-200 focus:border-[#cbe425] focus:outline-none transition-colors duration-300 text-black"
-                        placeholder="+33 1 23 45 67 89"
+                        placeholder="+212 1 23 45 67 89"
                       />
                     </div>
                     <div>
