@@ -28,7 +28,7 @@ const defaultReferences: Reference[] = [
   { name: "Client 16", logo: "/LOGO/16.png" },
   { name: "Client 17", logo: "/LOGO/17.png" },
   { name: "Client 18", logo: "/LOGO/18.png" },
-  { name: "Client 19", logo: "/LOGO/19.png" },
+  // { name: "Client 19", logo: "/LOGO/19.png" },
   { name: "Client 20", logo: "/LOGO/20.png" },
   { name: "Client 21", logo: "/LOGO/21.png" },
   { name: "Client 22", logo: "/LOGO/22.png" },
