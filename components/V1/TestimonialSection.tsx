@@ -136,7 +136,7 @@ export const TestimonialSection = () => {
               <div className="relative overflow-hidden rounded-xl shadow-2xl shadow-black/50">
                 <div className="aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] relative">
                   <img
-                    src="/president.jpg"
+                    src="/president.webp"
                     alt="Chefchaouni Hamza - PDG"
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
@@ -192,7 +192,7 @@ Nous ne sommes pas ce que nous possédons; nous sommes ce que nous faisons, ce q
                   Chefchaouni Hamza
                 </div>
                 <div className="text-[#c5d558]/70 text-xs sm:text-sm font-light tracking-wider">
-                  PDG
+                  Architecte d&apos;intérieur
                 </div>
               </div>
             </div>
