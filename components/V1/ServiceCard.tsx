@@ -11,6 +11,7 @@ interface ServiceCardProps {
   imageHeight?: string;
   imageWidth?: string;
   imageUrl?: string;
+  videoUrl?: string;
 }
 
 export const ServiceCard = ({
@@ -21,6 +22,7 @@ export const ServiceCard = ({
   imageHeight,
   imageWidth,
   imageUrl,
+  videoUrl,
 }: ServiceCardProps) => {
   const [active, setActive] = useState<number | null>(null);
 
@@ -35,13 +37,29 @@ export const ServiceCard = ({
       {/* base dark overlay */}
       <div className="absolute inset-0 bg-black transition-transform duration-1000 group-hover:scale-110 z-0" />
 
-      {/* Image area uses flex-basis so it scales with parent height (prevents collapse on zoom) */}
-      {imageUrl ? (
+      {/* Media area: video, image, or placeholder */}
+      {videoUrl ? (
         <div
           className="w-full overflow-hidden z-10"
-          style={{
-            flexBasis: imageFlexBasis,
-          }}
+          style={{ flexBasis: imageFlexBasis }}
+        >
+          <video
+            src={videoUrl}
+            autoPlay
+            loop
+            muted
+            className="w-full h-full object-cover shadow-lg border border-white/10"
+            style={{
+              height: "100%",
+              borderTopRightRadius: "34rem",
+              borderRadius: "0 34rem 0 0"
+            }}
+          />
+        </div>
+      ) : imageUrl ? (
+        <div
+          className="w-full overflow-hidden z-10"
+          style={{ flexBasis: imageFlexBasis }}
         >
           <img
             src={imageUrl}
@@ -53,11 +71,9 @@ export const ServiceCard = ({
       ) : hasPlaceholder ? (
         <div
           className="w-full flex items-center justify-center border border-white/10 text-white/60 text-sm font-medium pointer-events-none z-10"
-          style={{
-            flexBasis: imageFlexBasis,
-          }}
+          style={{ flexBasis: imageFlexBasis }}
         >
-          Image
+          Media
         </div>
       ) : null}
 

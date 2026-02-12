@@ -1,4 +1,4 @@
-import { useInView } from "../../lib/useInView";
+﻿import { useInView } from "../../lib/useInView";
 
 export const TestimonialSection = () => {
   const [ref, inView] = useInView({ threshold: 0.15 });
@@ -118,88 +118,44 @@ export const TestimonialSection = () => {
         </svg>
       </div> */}
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-          {/* Image Section */}
-          <div
-            className={`w-full lg:w-[45%] flex-shrink-0 transition-all duration-[2000ms] ease-out
-              ${inView
-                ? "opacity-100 translate-x-0 scale-100"
-                : "opacity-0 -translate-x-16 scale-95"}`}
-          >
-            <div className="relative group max-w-md mx-auto lg:max-w-none">
-              {/* Decorative frame */}
-              <div className="absolute -inset-3 sm:-inset-4 border border-[#c5d558]/30 rounded-2xl transform rotate-2 group-hover:rotate-0 transition-transform duration-700"></div>
-              <div className="absolute -inset-3 sm:-inset-4 border border-[#c5d558]/20 rounded-2xl transform -rotate-1 group-hover:rotate-0 transition-transform duration-700"></div>
-              
-              {/* Main image container */}
-              <div className="relative overflow-hidden rounded-xl shadow-2xl shadow-black/50">
-                <div className="aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] relative">
-                  <img
-                    src="/president.jpg"
-                    alt="Chefchaouni Hamza - PDG"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  />
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#c5d558]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </div>
-                
-                {/* Accent corner decoration */}
-                <div className="absolute top-0 right-0 w-16 h-16 sm:w-20 sm:h-20">
-                  <div className="absolute top-3 right-3 w-8 h-[1px] bg-[#c5d558]/60"></div>
-                  <div className="absolute top-3 right-3 w-[1px] h-8 bg-[#c5d558]/60"></div>
-                </div>
-                <div className="absolute bottom-0 left-0 w-16 h-16 sm:w-20 sm:h-20">
-                  <div className="absolute bottom-3 left-3 w-8 h-[1px] bg-[#c5d558]/60"></div>
-                  <div className="absolute bottom-3 left-3 w-[1px] h-8 bg-[#c5d558]/60"></div>
-                </div>
-              </div>
-              
-              {/* Floating accent element */}
-              <div className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 w-12 h-12 sm:w-16 sm:h-16 bg-[#c5d558] rounded-full opacity-20 blur-xl group-hover:opacity-30 transition-opacity duration-500"></div>
-            </div>
-          </div>
-
+      <div className="max-w-5xl mx-auto relative z-10">
+        <div className="flex justify-center">
           {/* Quote Section */}
           <div
-            className={`flex-1 text-center lg:text-left transition-all duration-[3000ms] ease-out
+            className={`text-center max-w-5xl transition-all duration-[3000ms] ease-out
               ${inView
                 ? "opacity-100 translate-x-0"
-                : "opacity-0 translate-x-12"}`}
+                : "opacity-0 -translate-x-12 sm:translate-x-12"}`}
           >
-            <div className="text-[#c5d558]/80 text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] mb-4 sm:mb-6 uppercase">
-              Mot du président
+            <div className="text-white/60 text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] mb-4 sm:mb-6 uppercase">
+              Mot du prÃ©sident
             </div>
 
-            <blockquote className="text-base sm:text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-6 sm:mb-8 italic text-white/90">
-              « Prenez de l’harmonie,
-Rajoutez une pincée d’amour, 
-Allumez la lumière, 
-Voici les ingrédients d’une belle architecture d’intérieure.
-Au-delà d’une passion qui devient un métier,
-Au-delà des mots et des définitions des dictionnaires,
-Le Design est comme une croyance : on l’adopte comme mode de vie au quotidien.
-A travers nos cinq sens, on se nourrit de la plus grande source d’inspiration : « LA NATURE ». 
-Cette nature qui se livre à nous dans un beau spectacle de matière, une explosion de couleurs, une fusion de formes irrégulières mais parfaites, une hymne qu’on écoute religieusement dans cette danse des vents.
-Nous ne sommes pas ce que nous possédons; nous sommes ce que nous faisons, ce que nous aimons. »
+            <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light leading-relaxed mb-6 sm:mb-8 italic">
+              Â« Prenez de lâ€™harmonie,
+Rajoutez une pincÃ©e dâ€™amour, 
+Allumez la lumiÃ¨re, 
+Voici les ingrÃ©dients dâ€™une belle architecture dâ€™intÃ©rieure.
+Au-delÃ  dâ€™une passion qui devient un mÃ©tier,
+Au-delÃ  des mots et des dÃ©finitions des dictionnaires,
+Le Design est comme une croyance : on lâ€™adopte comme mode de vie au quotidien.
+A travers nos cinq sens, on se nourrit de la plus grande source dâ€™inspiration : Â« LA NATURE Â». 
+Cette nature qui se livre Ã  nous dans un beau spectacle de matiÃ¨re, une explosion de couleurs, une fusion de formes irrÃ©guliÃ¨res mais parfaites, une hymne quâ€™on Ã©coute religieusement dans cette danse des vents.
+Nous ne sommes pas ce que nous possÃ©dons; nous sommes ce que nous faisons, ce que nous aimons. Â»
             </blockquote>
 
-            <div className="flex items-center gap-4 justify-center lg:justify-start">
-              <div className="w-12 h-[1px] bg-[#c5d558]/50 hidden sm:block"></div>
-              <div>
-                <div className="font-medium mb-1 text-sm sm:text-base text-white">
-                  Chefchaouni Hamza
-                </div>
-                <div className="text-[#c5d558]/70 text-xs sm:text-sm font-light tracking-wider">
-                  PDG
-                </div>
+            <div>
+              <div className="font-medium mb-1 text-sm sm:text-base">
+                Chefchaouni Hamza
+              </div>
+              <div className="text-white/60 text-xs sm:text-sm">
+                PDG
               </div>
             </div>
 
             {/* Golden ratio line */}
             <div
-              className="mt-6 sm:mt-8 h-[1px] bg-gradient-to-r from-[#c5d558]/40 via-white/20 to-transparent w-0 animate-expand lg:mx-0 mx-auto"
+              className="mt-6 sm:mt-8 h-[1px] bg-white/20 w-0 animate-expand mx-auto"
               style={{ animation: "expand 2s ease-out forwards" }}
             ></div>
           </div>
@@ -208,3 +164,4 @@ Nous ne sommes pas ce que nous possédons; nous sommes ce que nous faisons, ce q
     </section>
   );
 };
+

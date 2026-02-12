@@ -35,24 +35,24 @@ export const ServicesGrid = ({ services }: ServicesGridProps) => {
 
           <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
             Services de rénovation aux proportions du{" "}
-            <span className="font-semibold text-black">nombre d'or (Φ)</span>
+            <span className="font-semibold text-black">nombre d&apos;or (Φ)</span>
           </p>
         </div>
 
         {/* One-column layout for all service cards */}
-        <div className="flex flex-col gap-6">
-          {services.map((service, idx) => (
-            <ServiceCard
-              key={idx}
-              service={service}
-              index={idx}
-              {...(idx === 0 && {
-                hasPlaceholder: true,
-                imageUrl: "https://theplantsproject.com.au/cdn/shop/articles/office_idea_1024x1024.png?v=1742711986",
-              })}
-            />
-          ))}
-        </div>
+          <div className="flex flex-col gap-6">
+            {services.map((service, idx) => (
+              <ServiceCard
+                key={idx}
+                service={service}
+                index={idx}
+                {...(idx === 0 && {
+                  hasPlaceholder: true,
+                  videoUrl: "/visual-video.mp4", 
+                })}
+              />
+            ))}
+          </div>
 
         {/* <div className="mt-12 text-center">
           <p className="text-gray-400 text-xs tracking-wider uppercase">
