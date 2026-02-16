@@ -59,12 +59,12 @@ export const HeroSection = () => {
               Là où le cœur de la technique parle à l’âme du concept.
             </h1>
 
-            <p className="text-white/70 text-base sm:text-lg md:text-xl font-light leading-relaxed mb-8 sm:mb-12 max-w-xl">
+            {/* <p className="text-white/70 text-base sm:text-lg md:text-xl font-light leading-relaxed mb-8 sm:mb-12 max-w-xl">
               Chaque projet suit les principes du nombre d’or. Design
               mathématiquement parfait, résultats naturellement harmonieux.
-            </p>
+            </p> */}
 
-            <button className="group relative bg-[#cbe425] text-black px-6 sm:px-10 py-4 sm:py-5 text-xs sm:text-sm font-bold tracking-[0.15em] sm:tracking-[0.2em] overflow-hidden transition-all duration-700 hover:px-8 sm:hover:px-12 w-full sm:w-auto">
+            <button className="group relative bg-[#cbe425] text-black px-6 sm:px-10 py-4 sm:py-5 text-xs sm:text-sm font-bold tracking-[0.15em] sm:tracking-[0.2em] rounded-lg overflow-hidden transition-all duration-700 hover:px-8 sm:hover:px-12 w-full sm:w-auto">
               <span className="relative z-10 flex items-center gap-3">
                 DÉCOUVRIR NOS RÉALISATIONS
               </span>

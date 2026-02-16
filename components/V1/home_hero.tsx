@@ -147,7 +147,7 @@ export default function HeroFibo() {
             onClick={() => {
               redirect("/expertise");
             }}
-            className="group inline-flex items-center gap-4 bg-[#cbe425] text-black px-10 py-5 text-xs font-bold tracking-[0.2em] hover:bg-[#cbe425]/90 transition-all duration-500 hover:gap-6"
+            className="group inline-flex items-center gap-4 bg-[#cbe425] text-black px-10 py-5 text-xs font-bold tracking-[0.2em] rounded-lg hover:bg-[#cbe425]/90 transition-all duration-500 hover:gap-6"
           >
             DÉCOUVRIR
             <ChevronDown

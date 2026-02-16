@@ -100,7 +100,7 @@ const Navbar = () => {
         {/* CTA Button with Golden Ratio expansion */}
         <Link
           href="/contact"
-          className="hidden lg:block relative overflow-hidden bg-[#cbe425] text-black px-6 xl:px-8 py-2.5 xl:py-3 transition-all duration-700 group"
+          className="hidden lg:block relative overflow-hidden bg-[#cbe425] text-black px-6 xl:px-8 py-2.5 xl:py-3 rounded-lg transition-all duration-700 group"
         >
           <span className={`relative z-10 text-lg xl:text-xl ${dancingScript.className}`}>Design with purpose</span>
           {/* Golden ratio expanding background */}

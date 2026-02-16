@@ -13,7 +13,7 @@ export const CTASection = () => {
           consultation gratuite dès aujourd'hui.
         </p>
 
-        <button className="group relative bg-[#cbe425] text-black px-6 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-xs sm:text-sm font-bold tracking-[0.15em] sm:tracking-[0.2em] overflow-hidden transition-all duration-700 hover:px-8 sm:hover:px-12 md:hover:px-16 w-full sm:w-auto max-w-[320px] sm:max-w-none">
+        <button className="group relative bg-[#cbe425] text-black px-6 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-xs sm:text-sm font-bold tracking-[0.15em] sm:tracking-[0.2em] rounded-lg overflow-hidden transition-all duration-700 hover:px-8 sm:hover:px-12 md:hover:px-16 w-full sm:w-auto max-w-[320px] sm:max-w-none">
           <span className="relative z-10 flex items-center gap-2 sm:gap-4 mx-auto justify-center">
             <span className="hidden sm:inline">RÉVÉLER VOTRE INTÉRIEUR</span>
             <span className="sm:hidden">RÉVÉLER</span>

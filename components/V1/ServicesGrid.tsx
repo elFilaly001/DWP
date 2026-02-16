@@ -33,10 +33,10 @@ export const ServicesGrid = ({ services }: ServicesGridProps) => {
             Nos solutions
           </h2>
 
-          <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
+          {/* <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
             Services de rénovation aux proportions du{" "}
             <span className="font-semibold text-black">nombre d&apos;or (Φ)</span>
-          </p>
+          </p> */}
         </div>
 
         {/* One-column layout for all service cards */}

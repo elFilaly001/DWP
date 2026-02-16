@@ -137,7 +137,7 @@ export const TestimonialSection = () => {
                 <div className="aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] relative">
                   <img
                     src="/president.webp"
-                    alt="Chefchaouni Hamza - PDG"
+                    alt="Chefchaouni Hamza - Interior designer"
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   {/* Gradient overlay */}

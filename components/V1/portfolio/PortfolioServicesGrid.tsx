@@ -30,10 +30,10 @@ export const PortfolioServicesGrid = ({
                 Nos solutions
               </h2>
     
-              <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
-                Services de rénovation aux proportions du{" "}
-                <span className="font-semibold text-black">nombre d'or (Φ)</span>
-              </p>
+              {/* <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
+                Discutons de votre projet et donnons vie à vos idées. Planifiez une séance de co-création dès {" "}
+                <span className="font-semibold text-black">aujourd’hui.</span>
+              </p> */}
             </div>
     
             {/* outer grid: left big area + right column - responsive layout */}

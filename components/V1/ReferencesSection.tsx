@@ -8,19 +8,19 @@ interface Reference {
   logo: string;
 }
 
-// Default placeholder references - replace with actual client logos
+
 const defaultReferences: Reference[] = [
   { name: "Client 1", logo: "/LOGO/1.png" },
   { name: "Client 2", logo: "/LOGO/2.webp" },
-  { name: "Client 3", logo: "/LOGO/3.png" },
+  { name: "Client 3", logo: "/LOGO/maupassant.png" },
   { name: "Client 4", logo: "/LOGO/4.png" },
-  { name: "Client 5", logo: "/LOGO/5.png" },
+  { name: "Client 5", logo: "/LOGO/lycee.png" },
   { name: "Client 6", logo: "/LOGO/6.png" },
-  { name: "Client 7", logo: "/LOGO/7.png" },
+  { name: "Client 7", logo: "/LOGO/landor.webp" },
   { name: "Client 8", logo: "/LOGO/8.png" },
-  { name: "Client 9", logo: "/LOGO/9.png" },
+  { name: "Client 9", logo: "/LOGO/pwc.png" },
   { name: "Client 10", logo: "/LOGO/10.png" },
-  { name: "Client 11", logo: "/LOGO/11.png" },
+  { name: "Client 11", logo: "/LOGO/nexia.png" },
   { name: "Client 12", logo: "/LOGO/12.webp" },
   { name: "Client 13", logo: "/LOGO/13.png" },
   { name: "Client 14", logo: "/LOGO/14.png" },
@@ -28,7 +28,7 @@ const defaultReferences: Reference[] = [
   { name: "Client 16", logo: "/LOGO/16.png" },
   { name: "Client 17", logo: "/LOGO/17.png" },
   { name: "Client 18", logo: "/LOGO/18.png" },
-  // { name: "Client 19", logo: "/LOGO/19.png" },
+  { name: "Client 19", logo: "/LOGO/cmc.webp" },
   { name: "Client 20", logo: "/LOGO/20.png" },
   { name: "Client 21", logo: "/LOGO/21.png" },
   { name: "Client 22", logo: "/LOGO/22.png" },
@@ -41,7 +41,7 @@ const defaultReferences: Reference[] = [
   { name: "Client 29", logo: "/LOGO/29.png" },
   { name: "Client 30", logo: "/LOGO/30.png" },
   { name: "Client 31", logo: "/LOGO/31.png" },
-  { name: "Client 32", logo: "/LOGO/32.png" },
+  // { name: "Client 32", logo: "/LOGO/32.png" },
   { name: "Client 33", logo: "/LOGO/33.png" },
   { name: "Client 34", logo: "/LOGO/34.png" },
   { name: "Client 35", logo: "/LOGO/35.png" },
@@ -75,8 +75,8 @@ export const ReferencesSection = ({
           className="flex w-max"
           style={{
             animation: direction === 'left' 
-              ? 'scroll-left 30s linear infinite' 
-              : 'scroll-right 30s linear infinite',
+              ? 'scroll-left 55s linear infinite' 
+              : 'scroll-right 55s linear infinite',
             animationPlayState: isHovering ? 'paused' : 'running',
             willChange: 'transform',
             transform: 'translateZ(0)',
