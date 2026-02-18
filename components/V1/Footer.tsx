@@ -38,7 +38,7 @@ const Footer = () => {
           <span>N° 4 rue 2 Quartier Plaisance Vélodrome, Rue Ibn Hamdisse, Casablanca</span>
           <span>N° 7, Rue Salsola 552 lot 7 Secteur 18 Hay Riad, Rabat
 </span>
-          <span>Tél : <a href="tel:+33123456789" className="hover:text-[#cbe425] transition-colors duration-300">01 23 45 67 89</a></span>
+          <span>Tél : <a href="tel:+33123456789" className="hover:text-[#cbe425] transition-colors duration-300">0522 360 314</a></span>
         </div>
       </div>
       <div className="w-full border-t border-neutral-800 mt-8 mb-4"></div>
