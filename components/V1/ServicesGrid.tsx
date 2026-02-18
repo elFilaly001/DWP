@@ -5,6 +5,7 @@ interface Service {
   description: string;
   featured?: boolean;
   size?: string;
+  videoUrl?: string;
 }
 
 interface ServicesGridProps {
@@ -46,10 +47,8 @@ export const ServicesGrid = ({ services }: ServicesGridProps) => {
                 key={idx}
                 service={service}
                 index={idx}
-                {...(idx === 0 && {
-                  hasPlaceholder: true,
-                  videoUrl: "/visual-video.mp4", 
-                })}
+                videoUrl={service.videoUrl}
+                hasPlaceholder={idx === 0}
               />
             ))}
           </div>

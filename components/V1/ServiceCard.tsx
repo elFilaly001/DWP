@@ -26,59 +26,17 @@ export const ServiceCard = ({
 }: ServiceCardProps) => {
   const [active, setActive] = useState<number | null>(null);
 
-  const imageFlexBasis = imageHeight || "60%";
-
   return (
     <div
-      className={`${className} relative group cursor-pointer overflow-hidden transition-all duration-700 ease-out hover:shadow-2xl hover:z-10 h-full flex flex-col`}
+      className={`${className} relative group cursor-pointer overflow-hidden transition-all duration-700 ease-out hover:shadow-2xl hover:z-10 h-full flex flex-col md:flex-row`}
       onMouseEnter={() => setActive(index)}
       onMouseLeave={() => setActive(null)}
     >
       {/* base dark overlay */}
       <div className="absolute inset-0 bg-black transition-transform duration-1000 group-hover:scale-110 z-0" />
 
-      {/* Media area: video, image, or placeholder */}
-      {videoUrl ? (
-        <div
-          className="w-full overflow-hidden z-10"
-          style={{ flexBasis: imageFlexBasis }}
-        >
-          <video
-            src={videoUrl}
-            autoPlay
-            loop
-            muted
-            className="w-full h-full object-cover shadow-lg border border-white/10"
-            style={{
-              height: "100%",
-              borderTopRightRadius: "34rem",
-              borderRadius: "0 34rem 0 0"
-            }}
-          />
-        </div>
-      ) : imageUrl ? (
-        <div
-          className="w-full overflow-hidden z-10"
-          style={{ flexBasis: imageFlexBasis }}
-        >
-          <img
-            src={imageUrl}
-            alt={service?.title ?? "service image"}
-            className="w-full h-full object-cover"
-            style={{ height: "100%" }}
-          />
-        </div>
-      ) : hasPlaceholder ? (
-        <div
-          className="w-full flex items-center justify-center border border-white/10 text-white/60 text-sm font-medium pointer-events-none z-10"
-          style={{ flexBasis: imageFlexBasis }}
-        >
-          Media
-        </div>
-      ) : null}
-
-      {/* Content area fills remaining space and scrolls when needed */}
-      <div className="p-4 sm:p-6 md:p-4 z-20 overflow-y-auto scrollbar-hide flex-1">
+      {/* Content area on the left */}
+      <div className="p-4 sm:p-6 md:p-8 z-20 overflow-y-auto scrollbar-hide w-full md:w-1/3 flex items-center">
         <div>
           <h3
             className={`text-white font-light mb-2 sm:mb-4 transition-all duration-500 group-hover:tracking-wide ${
@@ -95,6 +53,43 @@ export const ServiceCard = ({
           </p>
         </div>
       </div>
+
+      {/* Media area on the right: video, image, or placeholder */}
+      {videoUrl ? (
+        <div
+          className="w-full md:w-2/3 overflow-hidden z-10 min-h-[200px] md:min-h-[300px]"
+        >
+          <video
+            src={videoUrl}
+            autoPlay
+            loop
+            muted
+            className="w-full h-full object-cover shadow-lg border border-white/10"
+            style={{
+              height: "100%",
+              borderTopRightRadius: "34rem",
+              borderRadius: "0 34rem 0 0"
+            }}
+          />
+        </div>
+      ) : imageUrl ? (
+        <div
+          className="w-full md:w-2/3 overflow-hidden z-10 min-h-[200px] md:min-h-[300px]"
+        >
+          <img
+            src={imageUrl}
+            alt={service?.title ?? "service image"}
+            className="w-full h-full object-cover"
+            style={{ height: "100%" }}
+          />
+        </div>
+      ) : hasPlaceholder ? (
+        <div
+          className="w-full md:w-2/3 flex items-center justify-center border border-white/10 text-white/60 text-sm font-medium pointer-events-none z-10 min-h-[200px] md:min-h-[300px]"
+        >
+          Media
+        </div>
+      ) : null}
     </div>
   );
 };

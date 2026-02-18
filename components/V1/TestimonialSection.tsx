@@ -192,7 +192,7 @@ Nous ne sommes pas ce que nous possédons; nous sommes ce que nous faisons, ce q
                   Chefchaouni Hamza
                 </div>
                 <div className="text-[#c5d558]/70 text-xs sm:text-sm font-light tracking-wider">
-                  Architecte d&apos;intérieur
+                  Interior designer
                 </div>
               </div>
             </div>

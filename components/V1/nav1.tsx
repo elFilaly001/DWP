@@ -51,7 +51,8 @@ const Navbar = () => {
             <img
               src="/LOGO/DWP-logo.png"
               alt="DWP logo"
-              className="h-8 sm:h-10 md:h-12 w-auto transition-all duration-700 group-hover:scale-110 group-hover:rotate-3 group-hover:drop-shadow-[0_0_20px_rgba(203,228,37,0.6)]"
+              className="h-12 sm:h-14 md:h-16 w-auto transition-all duration-700 group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(203,228,37,0.6)] group-hover:depth-effect"
+              style={{ transformStyle: 'preserve-3d' }}
             />
           </motion.div>
         </Link>
@@ -157,5 +158,21 @@ const Navbar = () => {
     </header>
   );
 };
+
+
+// Add a style tag for the depth effect (only once)
+if (typeof window !== 'undefined') {
+  const styleId = 'depth-effect-style';
+  if (!document.getElementById(styleId)) {
+    const style = document.createElement('style');
+    style.id = styleId;
+    style.innerHTML = `
+      .depth-effect {
+        transform: translateZ(60px) scale(1.1) !important;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+}
 
 export default Navbar;
