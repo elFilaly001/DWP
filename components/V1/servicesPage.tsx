@@ -34,7 +34,7 @@ const ServicesPage = () => {
     {
       title: "Campus & Espaces de savoir",
       description:
-        "Nous accompagnons les établissements d’enseignement dans la conception et l’aménagement d’espaces pédagogiques modernes : salles de cours, bibliothèques et zones collaboratives.Chaque projet intègre les nouveaux usages, la modularité des espaces et le confort des étudiants comme des enseignants afin de favoriser concentration, échanges et apprentissage.",
+        "Nous accompagnons les établissements d’enseignement dans la conception et l’aménagement d’espaces pédagogiques modernes : salles de cours, bibliothèques et zones collaboratives.Chaque projet intègre les nouveaux usages, la modularité des espaces et le confort des étudiants.",
       size: "medium",
       videoUrl: "/campus.mp4",
     },

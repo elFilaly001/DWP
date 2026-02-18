@@ -57,16 +57,16 @@ export const ServiceCard = ({
       {/* Media area on the right: video, image, or placeholder */}
       {videoUrl ? (
         <div
-          className="w-full md:w-2/3 overflow-hidden z-10 min-h-[200px] md:min-h-[300px]"
+          className="w-full md:w-2/3 overflow-hidden z-10 h-[250px] sm:h-[300px] md:h-[350px]"
         >
           <video
             src={videoUrl}
             autoPlay
             loop
             muted
+            playsInline
             className="w-full h-full object-cover shadow-lg border border-white/10"
             style={{
-              height: "100%",
               borderTopRightRadius: "34rem",
               borderRadius: "0 34rem 0 0"
             }}
@@ -74,18 +74,17 @@ export const ServiceCard = ({
         </div>
       ) : imageUrl ? (
         <div
-          className="w-full md:w-2/3 overflow-hidden z-10 min-h-[200px] md:min-h-[300px]"
+          className="w-full md:w-2/3 overflow-hidden z-10 h-[250px] sm:h-[300px] md:h-[350px]"
         >
           <img
             src={imageUrl}
             alt={service?.title ?? "service image"}
             className="w-full h-full object-cover"
-            style={{ height: "100%" }}
           />
         </div>
       ) : hasPlaceholder ? (
         <div
-          className="w-full md:w-2/3 flex items-center justify-center border border-white/10 text-white/60 text-sm font-medium pointer-events-none z-10 min-h-[200px] md:min-h-[300px]"
+          className="w-full md:w-2/3 flex items-center justify-center border border-white/10 text-white/60 text-sm font-medium pointer-events-none z-10 h-[250px] sm:h-[300px] md:h-[350px]"
         >
           Media
         </div>
