@@ -39,7 +39,7 @@ export const ServiceCard = ({
       <div className="p-4 sm:p-6 md:p-8 z-20 overflow-y-auto scrollbar-hide w-full md:w-1/3 flex items-center">
         <div>
           <h3
-            className={`text-white font-light mb-2 sm:mb-4 transition-all duration-500 group-hover:tracking-wide ${
+            className={`text-white font-light mb-2 sm:mb-4 ${
               index % 5 === 2
                 ? "text-xl sm:text-2xl md:text-3xl lg:text-4xl"
                 : "text-lg sm:text-xl md:text-2xl lg:text-3xl"

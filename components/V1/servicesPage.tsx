@@ -48,7 +48,7 @@ const ServicesPage = () => {
     {
       title: "Signalétique & orientation intelligente",
       description:
-        "Nous concevons des systèmes de signalétique architecturale qui structurent les espaces et facilitent l’orientation des usagers.Au-delà du simple panneau, notre approche intègre lisibilité, hiérarchisation de l’information, cohérence graphique et intégration au bâtiment afin d’améliorer la fluidité des déplacements, la sécurité et l’expérience utilisateur.",
+        "Nous concevons des systèmes de signalétique architecturale qui structurent les espaces et facilitent l’orientation. Au-delà du simple panneau, notre approche intègre lisibilité, hiérarchisation de l’information et cohérence graphique afin d’améliorer la fluidité des déplacements, la sécurité et l’expérience utilisateur.",
       size: "small",
       videoUrl: "/orientation.mp4",
     },

@@ -13,7 +13,7 @@ const defaultReferences: Reference[] = [
   { name: "Client 1", logo: "/LOGO/pharma5.webp" },
   { name: "Client 2", logo: "/LOGO/2.webp" },
   { name: "Client 3", logo: "/LOGO/maupassant.webp" },
-  { name: "Client 4", logo: "/LOGO/oncorad.png" },
+  // { name: "Client 4", logo: "/LOGO/oncorad.png" },
   { name: "Client 5", logo: "/LOGO/sportetudes.webp" },
   { name: "Client 6", logo: "/LOGO/masenn.png" },
   { name: "Client 7", logo: "/LOGO/landor.webp" },
