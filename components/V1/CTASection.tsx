@@ -22,9 +22,6 @@ export const CTASection = () => {
               className="transition-transform duration-700 group-hover:translate-x-2 sm:w-[18px] sm:h-[18px]"
             />
           </span>
-
-          {/* Golden rectangle expanding border */}
-          <span className="absolute inset-0 border-2 border-black scale-100 group-hover:scale-[1.05] transition-transform duration-700"></span>
         </button>
 
         {/* Fibonacci dots indicator - hidden on very small screens */}
