@@ -6,6 +6,7 @@ import { ProcessSection } from "./ProcessSection";
 import { TestimonialSection } from "./TestimonialSection";
 import { CTASection } from "./CTASection";
 import { ReferencesSection } from "./ReferencesSection";
+import { AnimatedImageSlider } from "./AnimatedImageSlider";
 
 const ServicesPage = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
