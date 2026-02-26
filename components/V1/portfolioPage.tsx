@@ -838,12 +838,12 @@ const PortfolioPage = () => {
   return (
     <div className="bg-white">
       <PortfolioHeroSection />
-      <AnimatedImageSlider mainPosition="left" images={slider1Images} />
-      <AnimatedImageSlider mainPosition="right" images={slider2Images} />
+      <AnimatedImageSlider mainPosition="right" images={codingSchoolImages} />
+      <AnimatedImageSlider mainPosition="left" images={slider5Images} />
       <AnimatedImageSlider mainPosition="left" images={slider3Images} />
       <AnimatedImageSlider mainPosition="right" images={slider4Images} />
-      <AnimatedImageSlider mainPosition="left" images={slider5Images} />
-      <AnimatedImageSlider mainPosition="right" images={codingSchoolImages} />
+      <AnimatedImageSlider mainPosition="left" images={slider1Images} />
+      <AnimatedImageSlider mainPosition="right" images={slider2Images} />
       {/* <PortfolioServicesGrid services={services} /> */}
       <PortfolioCTASection />
 

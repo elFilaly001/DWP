@@ -82,7 +82,11 @@ export const AnimatedImageSlider = ({
   return (
     <section className={`py-10 sm:py-14 bg-[#f5f5f5] ${className}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative h-[360px] sm:h-[420px] md:h-[460px] lg:h-[520px]">
+        <div
+          className="relative h-[360px] sm:h-[420px] md:h-[460px] lg:h-[520px]"
+          onClick={handleNext}
+          style={{ cursor: "pointer" }}
+        >
           {items.map((slide, index) => {
             const baseClasses =
               "absolute top-1/2 -translate-y-1/2 rounded-2xl shadow-2xl bg-center bg-cover transition-all duration-500 ease-out";
@@ -172,23 +176,6 @@ export const AnimatedImageSlider = ({
               </div>
             );
           })}
-
-          <div className="absolute -bottom-10 sm:-bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3 z-40">
-            <button
-              onClick={handlePrev}
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-black/10 bg-white/70 backdrop-blur-sm flex items-center justify-center text-black hover:bg-black hover:text-white hover:border-black transition-all duration-200 shadow-sm hover:shadow-md"
-              aria-label="Projet précédent"
-            >
-              <ArrowLeft size={18} />
-            </button>
-            <button
-              onClick={handleNext}
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-black/10 bg-white/70 backdrop-blur-sm flex items-center justify-center text-black hover:bg-black hover:text-white hover:border-black transition-all duration-200 shadow-sm hover:shadow-md"
-              aria-label="Projet suivant"
-            >
-              <ArrowRight size={18} />
-            </button>
-          </div>
         </div>
       </div>
     </section>
@@ -196,4 +183,3 @@ export const AnimatedImageSlider = ({
 };
 
 export default AnimatedImageSlider;
-
