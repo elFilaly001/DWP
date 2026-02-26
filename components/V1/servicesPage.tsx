@@ -30,7 +30,7 @@ const ServicesPage = () => {
         "Nous aménageons des salles de cours, bibliothèques et espaces collaboratifs adaptés aux nouveaux usages pédagogiques. Nos solutions privilégient la modularité, le confort et l’acoustique afin d’améliorer la concentration, l’interaction et le bien-être des étudiants comme des enseignants.",
       featured: true,
       size: "large",
-      videoUrl: "/visual-video.mp4",
+      videoUrl: "/office.mov",
     },
     {
       title: "Campus & Espaces de savoir",
@@ -44,14 +44,14 @@ const ServicesPage = () => {
       description:
         "Nous concevons et aménageons des hôtels, résidences et espaces d’accueil pensés pour créer une véritable immersion émotionnelle pour le visiteur.Chaque projet valorise l’identité du lieu grâce au design, aux matériaux, à la lumière et à la circulation, tout en garantissant confort, fonctionnalité et efficacité d’exploitation.",
       size: "medium",
-      videoUrl: "/hotel.mp4",
+      videoUrl: "/hotel.mov",
     },
     {
       title: "Signalétique & orientation intelligente",
       description:
         "Nous concevons des systèmes de signalétique architecturale qui structurent les espaces et facilitent l’orientation. Au-delà du simple panneau, notre approche intègre lisibilité, hiérarchisation de l’information et cohérence graphique afin d’améliorer la fluidité des déplacements, la sécurité et l’expérience utilisateur.",
       size: "small",
-      videoUrl: "/orientation.mp4",
+      videoUrl: "/orientation.mov",
     },
   ];
 
