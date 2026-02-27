@@ -119,6 +119,31 @@ const ServicesPage = () => {
       <HeroSection />
       <TestimonialSection />
       <ServicesGrid services={services} />
+      <section className="relative bg-black text-white py-12 w-full overflow-hidden">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-2">
+          <div className="text-center md:text-left md:flex-1">
+            <h2 className="text-2xl sm:text-3xl font-serif mb-2">
+              Nos certifications & reconnaissances
+            </h2>
+            <p className="text-white/70 mb-0">
+              Des preuves de qualité et d’engagement pour des projets réussis.
+            </p>
+          </div>
+
+          <div className="flex items-center gap-6 md:gap-12">
+            <img
+              src="/certif/telechargement-1.png"
+              alt="certif 1"
+              className="w-40 h-40"
+            />
+            <img
+              src="/certif/telechargement-2.png"
+              alt="certif 2"
+              className="w-40 h-40"
+            />
+          </div>
+        </div>
+      </section>
       <ProcessSection process={process} />
       <ReferencesSection />
       <CTASection />
