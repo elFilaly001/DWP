@@ -23,9 +23,11 @@ const Footer = () => {
     <footer className="w-full bg-neutral-950 text-neutral-300 pt-12 pb-6 px-4 border-t border-neutral-800 mt-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 items-start">
         {/* Brand logo and tagline */}
-        <div className="flex flex-col items-start gap-3">
+        <div className="flex flex-col items-center md:items-start gap-3 text-center md:text-left">
           <img src="/LOGO/DWP-logo.png" alt="DWP logo" className="h-10 w-auto mb-2" />
-          <span className={`text-[#cbe425] text-base font-semibold tracking-wide ${dancingScript.className}`}>Design with purpose</span>
+          <span className={`text-[#cbe425] text-base font-semibold tracking-wide ${dancingScript.className}`}>
+            Design with purpose
+          </span>
         </div>
         {/* Navigation links */}
         <nav className="flex flex-col items-center gap-2 md:gap-3 text-sm font-medium">
@@ -36,11 +38,19 @@ const Footer = () => {
           ))}
         </nav>
         {/* Address and phone */}
-        <div className="flex flex-col items-end gap-2 text-xs text-neutral-500">
-          <span>N° 4 rue 2 Quartier Plaisance Vélodrome, Rue Ibn Hamdisse, Casablanca</span>
-          <span>N° 7, Rue Salsola 552 lot 7 Secteur 18 Hay Riad, Rabat
-</span>
-          <span>Tél : <a href="tel:+" className="hover:text-[#cbe425] transition-colors duration-300">0522 360 314</a></span>
+        <div className="flex flex-col items-center md:items-end gap-2 text-xs text-neutral-500 text-center md:text-right">
+          <span>
+            N° 4 rue 2 Quartier Plaisance Vélodrome, Rue Ibn Hamdisse, Casablanca
+          </span>
+          <span>
+            N° 7, Rue Salsola 552 lot 7 Secteur 18 Hay Riad, Rabat
+          </span>
+          <span>
+            Tél :{" "}
+            <a href="tel:+" className="hover:text-[#cbe425] transition-colors duration-300">
+              0522 360 314
+            </a>
+          </span>
         </div>
       </div>
       <div className="w-full border-t border-neutral-800 mt-8 mb-4"></div>
