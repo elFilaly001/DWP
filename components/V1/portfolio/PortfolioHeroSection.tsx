@@ -23,11 +23,11 @@ export const PortfolioHeroSection = () => {
         <div className="grid md:grid-cols-[1.618fr_1fr] gap-12 items-center">
           {/* Left: 61.8% - Content (Golden Ratio) */}
           <div>
-            <div className="text-white/60 text-sm tracking-[0.3em] mb-6 uppercase">
+            <div className="text-white/60 text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] mb-4 sm:mb-6 uppercase">
               Notre expertise
             </div>
 
-            <h1 className="text-white text-[clamp(20px,8vw,72px)] font-serif leading-[0.95] mb-8 group">
+            <h1 className="text-white text-[clamp(20px,8vw,72px)] font-serif leading-[0.95] mb-6 sm:mb-8 group">
               Chaque création raconte une expérience.
             </h1>
 
@@ -35,19 +35,14 @@ export const PortfolioHeroSection = () => {
               Chaque projet suit les principes du nombre d’or. Design mathématiquement parfait, résultats naturellement harmonieux.
             </p> */}
 
-            <button className="group relative bg-[#cbe425] text-black px-10 py-5 text-sm font-bold tracking-[0.2em] rounded-lg overflow-hidden transition-all duration-700 hover:px-12">
+            <button className="group relative bg-[#cbe425] text-black px-6 sm:px-10 py-4 sm:py-5 text-xs sm:text-sm font-bold tracking-[0.15em] sm:tracking-[0.2em] rounded-lg overflow-hidden transition-all duration-700 hover:px-8 sm:hover:px-12 w-full sm:w-auto">
               <span className="relative z-10 flex items-center gap-3">
                 DÉCOUVRIR NOS RÉALISATIONS
-                <ArrowRight
-                  size={16}
-                  className="transition-transform duration-700 group-hover:translate-x-2"
-                />
               </span>
               <span className="absolute inset-0 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></span>
               <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 text-[#cbe425] z-10">
                 <span className="flex items-center gap-3">
                   DÉCOUVRIR NOS RÉALISATIONS
-                  <ArrowRight size={16} />
                 </span>
               </span>
             </button>

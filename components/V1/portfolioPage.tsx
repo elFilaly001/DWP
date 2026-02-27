@@ -20,46 +20,7 @@ const PortfolioPage = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const services = [
-    {
-      title: "Rénovation de cuisine",
-      description:
-        "Transformez votre cuisine en un paradis culinaire avec des appareils modernes, des rangements sur mesure et des finitions élégantes.",
-      featured: true,
-      size: "large",
-    },
-    {
-      title: "Conception de bureau",
-      description:
-        "Créez des espaces de travail inspirants qui stimulent la productivité et reflètent la culture de votre entreprise.",
-      size: "medium",
-    },
-    {
-      title: "Rénovation complète",
-      description:
-        "Des transformations totales qui réinventent votre espace de vie, du sol au plafond, avec un design cohérent.",
-      size: "medium",
-    },
-    {
-      title: "Couloirs & Hallways",
-      description:
-        "Optimisez vos espaces de transition avec des solutions de rangement astucieuses et des éléments de design.",
-      size: "small",
-    },
-    {
-      title: "Espaces commerciaux",
-      description:
-        "Concevez des environnements commerciaux qui améliorent l'expérience client et favorisent la réussite.",
-      size: "small",
-    },
-    {
-      title: "Design extérieur",
-      description:
-        "Sublimez l'attrait de votre propriété avec des rénovations extérieures remarquables.",
-      size: "small",
-    },
-  ];
-
+  
   const slider1Images = [
     {
       title: "PWC",
