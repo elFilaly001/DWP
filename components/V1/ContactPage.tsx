@@ -149,7 +149,7 @@ export default function ContactPage() {
                   {
                     icon: Phone,
                     title: "Téléphone",
-                    content: "05 22 36 03 14",
+                    content: "0522 360 314",
                   },
                   {
                     icon: Mail,

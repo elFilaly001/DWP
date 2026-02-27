@@ -155,7 +155,7 @@ const PortfolioPage = () => {
         description:
           "Un cadre académique d'excellence où se rencontrent prestige, modernité et esprit de réseau.",
         imageUrl:
-          "/abs-visual-3.webp",
+          "/abs-visual-10.webp",
       },
       {
         title: "Suite parentale",
@@ -169,7 +169,7 @@ const PortfolioPage = () => {
         description:
           "Un coin lecture enveloppant, structuré par des modules de rangements sur mesure.",
         imageUrl:
-          "/abs-visual-1.webp",
+          "/abs-visual-3.webp",
       },
       {
         title: "Espace lecture & bibliothèque",
@@ -218,7 +218,7 @@ const PortfolioPage = () => {
         description:
           "Un coin lecture enveloppant, structuré par des modules de rangements sur mesure.",
         imageUrl:
-          "/abs-visual-10.webp",
+          "/abs-visual-1.webp",
       },
       {
         title: "Espace lecture & bibliothèque",
@@ -275,6 +275,34 @@ const PortfolioPage = () => {
           "Un coin lecture enveloppant, structuré par des modules de rangements sur mesure.",
         imageUrl:
           "/abs-visual-18.webp",
+      },
+      {
+        title: "Espace lecture & bibliothèque",
+        description:
+          "Un coin lecture enveloppant, structuré par des modules de rangements sur mesure.",
+        imageUrl:
+          "/abs-visual-19.webp",
+      },
+      {
+        title: "Espace lecture & bibliothèque",
+        description:
+          "Un coin lecture enveloppant, structuré par des modules de rangements sur mesure.",
+        imageUrl:
+          "/abs-visual-20.webp",
+      },
+      {
+        title: "Espace lecture & bibliothèque",
+        description:
+          "Un coin lecture enveloppant, structuré par des modules de rangements sur mesure.",
+        imageUrl:
+          "/abs-visual-21.webp",
+      },
+      {
+        title: "Espace lecture & bibliothèque",
+        description:
+          "Un coin lecture enveloppant, structuré par des modules de rangements sur mesure.",
+        imageUrl:
+          "/abs-visual-22.webp",
       },
   ];
 
