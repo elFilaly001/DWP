@@ -118,6 +118,10 @@ const ServicesPage = () => {
     <div className="bg-white">
       <HeroSection />
       <TestimonialSection />
+      <div className="flex flex-row justify-center gap-12 my-8">
+        <img src="/certif/telechargement_1.webp" alt="certif 1" className="w-40 h-40" />
+        <img src="/certif/telechargement_2.webp" alt="certif 2" className="w-40 h-40" />
+      </div>
       <ServicesGrid services={services} />
       <ProcessSection process={process} />
       <ReferencesSection />
