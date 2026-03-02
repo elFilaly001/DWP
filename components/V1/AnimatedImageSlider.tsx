@@ -142,12 +142,12 @@ export const AnimatedImageSlider = ({
                 }}
               >
                 {isPrimarySlide && index === 0 && (
-                  <div className="relative h-full w-full p-6 sm:p-8 md:p-10 flex flex-col justify-center text-white">
+                  <div className="relative h-full w-full p-6 sm:p-8 md:p-10 flex flex-col justify-end text-white">
                     <div className="max-w-md sm:max-w-lg">
                       <h3 className="text-white text-[clamp(20px,4vw,40px)] font-serif leading-[0.95] mb-4 sm:mb-5">
                         {slide.title}
                       </h3>
-                      <p className="text-white/70 text-sm sm:text-base md:text-lg font-light leading-relaxed mb-5 sm:mb-6">
+                      <p className="text-white/70 text-sm sm:text-base md:text-lg font-light leading-relaxed ">
                         {slide.description}
                       </p>
                       {slide.ctaLabel && slide.ctaHref && (
