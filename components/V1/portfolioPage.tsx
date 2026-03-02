@@ -26,7 +26,7 @@ const PortfolioPage = () => {
       title: "PWC",
       description:
         "Un plateau lumineux et structuré, pensé pour allier collaboration et intimité au quotidien.",
-      imageUrl: "/pwc-visual-6.webp",
+      imageUrl: "/pwc-visual-17.webp",
     },
     {
       title: "Espace de réunion immersif",
@@ -145,7 +145,7 @@ const PortfolioPage = () => {
       description:
         "Un espace d’accueil qui pose le ton dès l’entrée : lisible, rassurant et immédiatement identifiable.",
       imageUrl:
-        "/pwc-visual-17.webp",
+        "/pwc-visual-6.webp",
     },
   ];
 
@@ -722,6 +722,7 @@ const PortfolioPage = () => {
   ];
 
   const codingSchoolImageFiles = [
+    "codingschool-15.webp",
     "codingschool-1.webp",
     "codingschool-2.webp",
     "codingschool-3.webp",
@@ -736,7 +737,6 @@ const PortfolioPage = () => {
     "codingschool-12.webp",
     "codingschool-13.webp",
     "codingschool-14.webp",
-    "codingschool-15.webp",
     "codingschool-16.webp",
     "codingschool-17.webp",
     "codingschool-18.webp",
