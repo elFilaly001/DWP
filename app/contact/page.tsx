@@ -3,7 +3,7 @@ import ContactPage from "@/components/V1/ContactPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact | Architecture Intérieure & Rénovation | DWP",
+  title: "DWP - Contact",
   description:
     "Contactez DWP pour vos projets d'architecture intérieure, rénovation, design d'espaces, conseils et devis personnalisés. Nous intervenons en France, Europe et Maroc.",
   keywords: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "expertise"
   ],
   openGraph: {
-    title: "Contact | Architecture Intérieure & Rénovation | DWP",
+    title: "DWP - Contact",
     description:
       "Contactez DWP pour vos projets d'architecture intérieure, rénovation, design d'espaces, conseils et devis personnalisés.",
     url: "https://dwp-seven.vercel.app/contact",

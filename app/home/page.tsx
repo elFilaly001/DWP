@@ -3,7 +3,7 @@ import HomePage from "@/components/V1/home_hero";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Architecture Intérieure & Rénovation | DWP",
+  title: "DWP - home",
   description:
     "DWP - Experts en architecture intérieure, rénovation, et design d'espaces modernes pour particuliers et professionnels. Découvrez nos projets et notre savoir-faire.",
   keywords: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     "Rabat"
   ],
   openGraph: {
-    title: "Architecture Intérieure & Rénovation | DWP",
+    title: "DWP - home",
     description:
       "DWP - Experts en architecture intérieure, rénovation, et design d'espaces modernes pour particuliers et professionnels.",
     url: "https://dwp-seven.vercel.app/home",

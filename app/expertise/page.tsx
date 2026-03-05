@@ -3,7 +3,7 @@ import ServicePage from "@/components/V1/servicesPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Expertise & Services en Architecture Intérieure | DWP",
+  title: "DWP - Expertise",
   description:
     "Découvrez l’expertise DWP en rénovation, design d’intérieur, conception de bureaux, cuisines, espaces commerciaux et extérieurs. Solutions sur mesure pour particuliers et professionnels.",
   keywords: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "Chefchaouni"
   ],
   openGraph: {
-    title: "Expertise & Services en Architecture Intérieure | DWP",
+    title: "DWP - Expertise",
     description:
       "Découvrez l’expertise DWP en rénovation, design d’intérieur, conception de bureaux, cuisines, espaces commerciaux et extérieurs.",
     url: "https://dwp-seven.vercel.app/expertise",

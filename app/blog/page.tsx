@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BlogPage from "@/components/V1/BlogPage";
 
 export const metadata: Metadata = {
-  title: "Blog Architecture Intérieure & Lumière | DWP",
+  title: "DWP - Blog",
   description:
     "Un regard d’expert sur la lumière en architecture intérieure : concepts, paramètres techniques et clés pour créer des espaces harmonieux et sensibles.",
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "DWP",
   ],
   openGraph: {
-    title: "Blog Architecture Intérieure & Lumière | DWP",
+    title: "DWP - Blog",
     description:
       "Comprendre comment la lumière sculpte les espaces et influence les émotions en architecture intérieure.",
     url: "https://dwp-seven.vercel.app/blog",

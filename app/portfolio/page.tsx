@@ -3,7 +3,7 @@ import PortfolioPage from "@/components/V1/portfolioPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portfolio Réalisations | Architecture Intérieure & Rénovation | DWP",
+  title: "DWP - Portfolio",
   description:
     "Découvrez nos réalisations en architecture intérieure, rénovation de cuisines, bureaux, espaces commerciaux et extérieurs. Projets sur mesure pour particuliers et professionnels.",
   keywords: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "Rabat"
   ],
   openGraph: {
-    title: "Portfolio Réalisations | Architecture Intérieure & Rénovation | DWP",
+    title: "DWP - Portfolio",
     description:
       "Découvrez nos réalisations en architecture intérieure, rénovation de cuisines, bureaux, espaces commerciaux et extérieurs.",
     url: "https://dwp-seven.vercel.app/portfolio",
