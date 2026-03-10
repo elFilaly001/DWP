@@ -28,14 +28,14 @@ export const ServiceCard = ({
 
   return (
     <div
-      className={`${className} relative group cursor-pointer overflow-hidden transition-all duration-700 ease-out hover:shadow-2xl hover:z-10 h-full flex flex-col md:flex-row`}
+      className={`${className} relative group cursor-pointer overflow-hidden transition-all duration-700 ease-out hover:shadow-2xl hover:z-10 h-full flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
       onMouseEnter={() => setActive(index)}
       onMouseLeave={() => setActive(null)}
     >
       {/* base dark overlay */}
       <div className="absolute inset-0 bg-black transition-transform duration-1000 group-hover:scale-110 z-0" />
 
-      {/* Content area on the left */}
+      {/* Content area */}
       <div className="p-4 sm:p-6 md:p-8 z-20 overflow-y-auto scrollbar-hide w-full md:w-1/3 flex items-center">
         <div>
           <h3
@@ -54,10 +54,15 @@ export const ServiceCard = ({
         </div>
       </div>
 
-      {/* Media area on the right: video, image, or placeholder */}
+      {/* Media area: video, image, or placeholder */}
       {videoUrl ? (
         <div
           className="w-full md:w-2/3 overflow-hidden z-10 h-[250px] sm:h-[300px] md:h-[350px]"
+          style={
+            index % 2 === 0
+              ? { borderRadius: "0 34rem 0 0" }
+              : { borderRadius: "34rem 0 0 0" }
+          }
         >
           <video
             src={videoUrl}
@@ -66,16 +71,10 @@ export const ServiceCard = ({
             muted
             playsInline
             className="w-full h-full object-cover shadow-lg border border-white/10"
-            style={{
-              borderTopRightRadius: "34rem",
-              borderRadius: "0 34rem 0 0"
-            }}
           />
         </div>
       ) : imageUrl ? (
-        <div
-          className="w-full md:w-2/3 overflow-hidden z-10 h-[250px] sm:h-[300px] md:h-[350px]"
-        >
+        <div className="w-full md:w-2/3 overflow-hidden z-10 h-[250px] sm:h-[300px] md:h-[350px]">
           <img
             src={imageUrl}
             alt={service?.title ?? "service image"}
@@ -83,9 +82,7 @@ export const ServiceCard = ({
           />
         </div>
       ) : hasPlaceholder ? (
-        <div
-          className="w-full md:w-2/3 flex items-center justify-center border border-white/10 text-white/60 text-sm font-medium pointer-events-none z-10 h-[250px] sm:h-[300px] md:h-[350px]"
-        >
+        <div className="w-full md:w-2/3 flex items-center justify-center border border-white/10 text-white/60 text-sm font-medium pointer-events-none z-10 h-[250px] sm:h-[300px] md:h-[350px]">
           Media
         </div>
       ) : null}

@@ -1,54 +1,7 @@
-import React from "react";
+﻿import React from "react";
 import Image from "next/image";
-
-const articleSections = [
-  {
-    id: "et-la-lumiere-fut",
-    label: "Chapitre 01",
-    title: "Et la lumière fut : l'élément clé de l'harmonie intérieure",
-    body: `Depuis toujours, elle façonne notre perception du monde et structure nos espaces de vie. En architecture intérieure, la lumière ne se limite pas à éclairer : elle révèle, transforme et sublime. Elle influence l'ambiance, le confort et même l'état d'esprit des occupants. Comprendre son rôle et maîtriser ses paramètres techniques permet de créer des espaces harmonieux, fonctionnels et émotionnellement impactants.`,
-  },
-  {
-    id: "comprendre-la-lumiere",
-    label: "Chapitre 02",
-    title: "Comprendre la lumière : une énergie au service du design",
-    body: `La lumière est un rayonnement électromagnétique perceptible par l'œil humain. Au-delà de sa définition scientifique, elle devient en design d'intérieur une véritable matière immatérielle. Son intensité, sa direction et sa température de couleur influencent la perception des volumes, la profondeur des espaces et la mise en valeur des textures.`,
-  },
-  {
-    id: "naturelle-vs-artificielle",
-    label: "Chapitre 03",
-    title:
-      "Lumière naturelle et lumière artificielle : une complémentarité essentielle",
-    body: `La lumière naturelle, provenant du soleil, évolue au fil des heures et des saisons. Elle apporte chaleur, dynamisme et bien-être, mais reste difficilement contrôlable et nécessite une conception architecturale adaptée. La lumière artificielle, quant à elle, offre une maîtrise totale : éclairage ambiant pour illuminer uniformément, éclairage d'accentuation pour valoriser des éléments précis, et éclairage de travail pour optimiser la visibilité dans les zones fonctionnelles.`,
-  },
-  {
-    id: "parametres-techniques",
-    label: "Chapitre 04",
-    title: "Les paramètres techniques à maîtriser",
-    body: `L'intensité lumineuse doit être adaptée à l'usage de chaque espace : plus soutenue dans les bureaux, plus douce dans les zones de détente. La température de couleur joue également un rôle majeur : les teintes chaudes (2000–3000K) créent une atmosphère chaleureuse et relaxante, tandis que les teintes plus froides (3500–5000K) stimulent la concentration. La distribution homogène de la lumière évite les zones d'ombre et améliore le confort visuel, tandis que les variateurs d'intensité et systèmes d'éclairage zoné permettent d'ajuster l'ambiance aux différents moments de la journée.`,
-  },
-  {
-    id: "lumiere-et-surfaces",
-    label: "Chapitre 05",
-    title: "La lumière et les surfaces : un dialogue permanent",
-    body: `La couleur des murs et des plafonds influence directement la réflexion lumineuse. Les teintes claires amplifient la luminosité et donnent une impression d'espace, tandis que les couleurs foncées absorbent la lumière et créent des ambiances plus intimistes. Le choix des matières, des textures et des finitions participe ainsi pleinement à la mise en scène de la lumière.`,
-  },
-  {
-    id: "conclusion",
-    label: "Chapitre 06",
-    title: "Conclusion : la lumière comme signature architecturale",
-    body: `Bien maîtrisée, la lumière devient la signature d'un projet. Elle structure l'espace, révèle les matières et crée une expérience sensorielle complète. Plus qu'un simple outil fonctionnel, elle est un langage architectural à part entière, capable de transformer un intérieur en œuvre vivante.`,
-  },
-];
-
-const blogImages = [
-  "/blog-visual-1.png",
-  "/blog-visual-2.jpeg",
-  "/blog-visual-3.png",
-  "/blog-visual-4.png",
-  "/blog-visual-5.png",
-  "/blog-visual-6.png",
-];
+import Link from "next/link";
+import { blogPosts } from "@/lib/blogData";
 
 export const BlogPage = () => {
   return (
@@ -69,81 +22,85 @@ export const BlogPage = () => {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 md:px-12 py-20 sm:py-24 md:py-28">
           <div className="text-[#cbe425] text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] mb-4 uppercase">
-            Journal de l'intérieur
+            Journal de l&apos;interieur
           </div>
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif leading-[0.95] mb-6 sm:mb-8">
-            Et la lumière fut.
+            Le Blog DWP.
           </h1>
 
           <p className="text-white/70 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl">
-            Comment la lumière façonne nos espaces, notre perception et nos
-            émotions. Une exploration technique et sensible au cœur de
-            l’architecture intérieure.
+            Explorations, reflexions et regards d&apos;experts sur
+            l&apos;architecture interieure, la lumiere et le design.
           </p>
         </div>
       </section>
 
-      {/* Article body */}
+      {/* Blog post grid */}
       <section className="relative pb-16 sm:pb-20 md:pb-28">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-12 space-y-16 sm:space-y-20 md:space-y-24">
-          {articleSections.map((section, index) => {
-            const isEven = index % 2 === 0;
-            const imageSrc = blogImages[index];
-
-            return (
-              <article
-                key={section.id}
-                className="grid md:grid-cols-2 gap-10 md:gap-14 items-center"
-                id={section.id}
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {blogPosts.map((post) => (
+              <Link
+                key={post.id}
+                href={`/blog/${post.id}`}
+                className="group block border border-white/10 rounded-2xl overflow-hidden bg-white/5 hover:border-[#cbe425]/40 hover:bg-white/[0.07] transition-all duration-300"
               >
-                {/* Text */}
-                <div
-                  className={
-                    isEven ? "order-1" : "order-2 md:order-1 md:pl-8"
-                  }
-                >
-                  <div className="text-[#cbe425] text-[0.7rem] sm:text-xs tracking-[0.25em] uppercase mb-3">
-                    {section.label}
-                  </div>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4 sm:mb-5">
-                    {section.title}
-                  </h2>
-                  <p className="text-white/70 text-sm sm:text-base md:text-lg font-light leading-relaxed">
-                    {section.body}
-                  </p>
+                {/* Cover image */}
+                <div className="relative w-full h-48 overflow-hidden bg-white/5">
+                  {post.coverImage && (
+                    <Image
+                      src={post.coverImage}
+                      alt={post.heroTitle}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 </div>
 
-                {/* Image */}
-                <div
-                  className={
-                    isEven ? "order-2" : "order-1 md:order-2 md:pr-8"
-                  }
-                >
-                  <div className="relative w-full h-56 sm:h-64 md:h-72 rounded-2xl overflow-hidden bg-white/5 border border-white/10">
-                    {imageSrc && (
-                      <Image
-                        src={imageSrc}
-                        alt={section.title}
-                        fill
-                        className="object-cover"
-                        sizes="(min-width: 1024px) 50vw, 100vw"
-                      />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-black/10" />
-                    <div className="relative z-10 h-full w-full flex items-end justify-between p-4 sm:p-5 md:p-6">
-                      {/* <div className="text-[0.65rem] sm:text-xs uppercase tracking-[0.25em] text-white/60">
-                        Visuel lumière 0{index + 1}
-                      </div> */}
-                      <div className="text-[0.65rem] sm:text-xs text-white/60">
-                        © DWP
-                      </div>
-                    </div>
+                {/* Content */}
+                <div className="p-5 sm:p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-[#cbe425] text-[0.65rem] tracking-[0.25em] uppercase">
+                      {post.category}
+                    </span>
+                    <span className="text-white/30 text-xs"></span>
+                    <span className="text-white/40 text-[0.65rem]">
+                      {post.date}
+                    </span>
+                  </div>
+
+                  <h2 className="text-lg sm:text-xl font-serif mb-3 group-hover:text-[#cbe425] transition-colors duration-300 leading-snug">
+                    {post.heroTitle}
+                  </h2>
+
+                  <p className="text-white/60 text-sm font-light leading-relaxed line-clamp-3">
+                    {post.excerpt}
+                  </p>
+
+                  <div className="mt-4 flex items-center gap-2 text-[#cbe425] text-xs tracking-[0.15em] uppercase">
+                    Lire l&apos;article
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="group-hover:translate-x-1 transition-transform duration-300"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
                   </div>
                 </div>
-              </article>
-            );
-          })}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
     </main>
@@ -151,4 +108,3 @@ export const BlogPage = () => {
 };
 
 export default BlogPage;
-

@@ -4,23 +4,19 @@ import BlogPage from "@/components/V1/BlogPage";
 export const metadata: Metadata = {
   title: "DWP - Blog",
   description:
-    "Un regard d’expert sur la lumière en architecture intérieure : concepts, paramètres techniques et clés pour créer des espaces harmonieux et sensibles.",
+    "Explorations, réflexions et regards d'experts sur l'architecture intérieure, la lumière et le design.",
   keywords: [
     "blog architecture intérieure",
     "éclairage intérieur",
     "design lumière",
     "ambiance lumineuse",
-    "température de couleur",
-    "éclairage naturel",
-    "éclairage artificiel",
-    "confort visuel",
     "design d'intérieur",
     "DWP",
   ],
   openGraph: {
     title: "DWP - Blog",
     description:
-      "Comprendre comment la lumière sculpte les espaces et influence les émotions en architecture intérieure.",
+      "Explorations, réflexions et regards d'experts sur l'architecture intérieure, la lumière et le design.",
     url: "https://dwp-seven.vercel.app/blog",
     siteName: "DWP",
     images: [

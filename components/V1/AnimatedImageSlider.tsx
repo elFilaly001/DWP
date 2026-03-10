@@ -87,6 +87,44 @@ export const AnimatedImageSlider = ({
           onClick={handleNext}
           style={{ cursor: "pointer" }}
         >
+          {/* Project name — visible below the stacked secondary cards only after 1st image is gone */}
+          {(() => {
+            if (items[0]._index === 0) return null;
+            const projectTitle = items.find((s) => s._index === 0)?.title;
+            if (!projectTitle) return null;
+            return (
+              <div
+                className={`absolute bottom-6 z-40 pointer-events-none hidden sm:flex sm:flex-col sm:gap-1 ${
+                  mainPosition === "left"
+                    ? "-right-11 items-end pr-4"
+                    : "-left-11 items-start pl-4"
+                }`}
+              >
+                <span
+                  className="text-[10px] tracking-[0.25em] uppercase font-light"
+                  style={{ color: "#888" }}
+                >
+                  projet
+                </span>
+                <div
+                  className={`w-8 h-px ${mainPosition === "left" ? "self-end" : "self-start"}`}
+                  style={{ backgroundColor: "#888" }}
+                />
+                <h4
+                  className="text-xl sm:text-2xl md:text-3xl font-serif font-light leading-tight"
+                  style={{
+                    color: "#1a1a1a",
+                    background: "none",
+                    WebkitBackgroundClip: "unset",
+                    WebkitTextFillColor: "#1a1a1a",
+                    letterSpacing: "-0.02em",
+                  }}
+                >
+                  {projectTitle}
+                </h4>
+              </div>
+            );
+          })()}
           {items.map((slide, index) => {
             const baseClasses =
               "absolute top-1/2 -translate-y-1/2 rounded-2xl shadow-2xl bg-center bg-cover transition-all duration-500 ease-out";

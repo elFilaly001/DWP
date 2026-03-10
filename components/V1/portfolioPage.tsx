@@ -151,7 +151,7 @@ const PortfolioPage = () => {
 
   const slider2Images = [
       {
-        title: "ABS (Africa Business School) ",
+        title: "ABS (Africa Business School)",
         description:
           "Un cadre académique d'excellence où se rencontrent prestige, modernité et esprit de réseau.",
         imageUrl:
